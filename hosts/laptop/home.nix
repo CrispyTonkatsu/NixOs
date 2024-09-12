@@ -138,7 +138,7 @@ programs.zoxide.enable = true;
 			bind = [
 				"$mod, F, exec, floorp"
 					"$mod, Q, killactive"
-					"$mod, SPACE, exec, rofi -show drun -show-icons"
+					"$mod, exec, rofi -show drun -show-icons"
 					"$mod, P, exec, kitty"
 					"$mod, M, fullscreen"
 			]
