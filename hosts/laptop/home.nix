@@ -175,7 +175,7 @@
 					)
 						9)
 				);
-			"exec-once" = ["hyprpaper"  ];
+			"exec-once" = "hyprpaper && waybar";
 		};
 	};
 
