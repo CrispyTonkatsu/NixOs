@@ -97,6 +97,9 @@
 		cl
 		zig
 		lua
+		luaRocks
+		python
+		ripgrep
 
 # Vimjoyer said we might or might not need this
 #		  (pkgs.waybar.overrideAttrs (oldAttrs: {
