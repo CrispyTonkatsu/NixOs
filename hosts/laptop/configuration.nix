@@ -91,8 +91,6 @@
 #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 #  wget
 		neovim
-			zoxide
-			kitty
 
 # Vimjoyer said we might or might not need this
 #		  (pkgs.waybar.overrideAttrs (oldAttrs: {
