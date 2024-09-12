@@ -44,6 +44,7 @@
 		pkgs.floorp
 		pkgs.rofi-wayland
 		pkgs.obsidian
+		pkgs.vesktop
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
