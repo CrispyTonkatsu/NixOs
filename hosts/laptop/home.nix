@@ -157,7 +157,7 @@ programs.zoxide.enable = true;
 							)
 						9)
 			   );
-			"exec-once" = "waybar | hyprpaper";
+			"exec-once" = "waybar && hyprpaper";
 		};
 	};
 
