@@ -20,6 +20,8 @@
 # release notes.
 	home.stateVersion = "24.05"; # Please read the comment before changing.
 
+
+	 nixpkgs.config.allowUnfree = true; 
 # The home.packages option allows you to install Nix packages into your
 # environment.
 		home.packages = [
@@ -41,6 +43,7 @@
 # '')
 			pkgs.floorp
 			pkgs.rofi-wayland
+		pkgs.obsidian
 		];
 
 # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -156,6 +159,23 @@ programs.zoxide.enable = true;
 			   );
 			"exec-once" = "waybar";
 		};
+	};
+
+	services.hyprpaper = {
+		enable = true;
+		settings = 
+			{
+  ipc = "on";
+  splash = false;
+  splash_offset = 2.0;
+
+  preload =
+    [ "~/Downloads/bocchipaper1.jpg" ];
+
+  wallpaper = [
+    "~/Downloads/bocchipaper1.jpg"
+  ];
+};
 	};
 
 # Waybar settings
