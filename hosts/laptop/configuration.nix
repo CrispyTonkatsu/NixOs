@@ -98,7 +98,7 @@
 		zig
 		lua
 		luajitPackages.luarocks-nix
-		python
+		python3
 		ripgrep
 
 # Vimjoyer said we might or might not need this
