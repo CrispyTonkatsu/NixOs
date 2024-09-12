@@ -92,6 +92,10 @@
 #  wget
 		neovim
 		cargo
+		gcc
+		clang
+		cl
+		zig
 
 # Vimjoyer said we might or might not need this
 #		  (pkgs.waybar.overrideAttrs (oldAttrs: {
