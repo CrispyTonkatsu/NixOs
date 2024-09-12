@@ -96,6 +96,7 @@
 		clang
 		cl
 		zig
+		lua
 
 # Vimjoyer said we might or might not need this
 #		  (pkgs.waybar.overrideAttrs (oldAttrs: {
