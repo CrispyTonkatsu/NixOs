@@ -38,7 +38,7 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
 # Nvidia setup
-  hardware.opengl = {
+  hardware.graphics = {
 	  enable = true;
   };
 

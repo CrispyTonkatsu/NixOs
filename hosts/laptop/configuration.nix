@@ -37,8 +37,8 @@
 
 # Configure keymap in X11
 	services.xserver = {
-		layout = "us";
-		xkbVariant = "";
+		xkb.layout = "us";
+		xkb.variant = "";
 	};
 
 # Programs
@@ -58,7 +58,7 @@
 # Hyprland hardware vars
 	hardware = {
 #OpenGL
-		opengl.enable = true;
+		graphics.enable = true;
 
 # Most wayland compositors need this
 		nvidia.modesetting.enable = true;
