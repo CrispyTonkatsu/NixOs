@@ -157,7 +157,7 @@ programs.zoxide.enable = true;
 							)
 						9)
 			   );
-			"exec-once" = "waybar";
+			"exec-once" = "waybar | hyprpaper";
 		};
 	};
 
@@ -170,10 +170,10 @@ programs.zoxide.enable = true;
   splash_offset = 2.0;
 
   preload =
-    [ "~/Downloads/bocchipaper1.jpg" ];
+    [ "~/Downloads/bocchipaper2.jpg" ];
 
   wallpaper = [
-    "~/Downloads/bocchipaper1.jpg"
+    "~/Downloads/bocchipaper2.jpg"
   ];
 };
 	};
