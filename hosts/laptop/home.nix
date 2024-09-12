@@ -146,7 +146,7 @@
 					[ "/home/erina/Downloads/bocchipaper2.png" ];
 
 				wallpaper = [
-					"DP-1, /home/erina/Downloads/bocchipaper2.png"
+					"eDP-1, /home/erina/Downloads/bocchipaper2.png"
 				];
 			};
 	};
@@ -175,7 +175,7 @@
 					)
 						9)
 				);
-			"exec-once" = ["hyprpaper"  "waybar"];
+			"exec-once" = ["hyprpaper"  ];
 		};
 	};
 
