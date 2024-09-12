@@ -133,6 +133,24 @@
 		mako.enable = true;
 	};
 
+# Wallpaper settings
+	services.hyprpaper = {
+		enable = true;
+		settings = 
+			{
+				ipc = "on";
+				splash = false;
+				splash_offset = 2.0;
+
+				preload =
+					[ "/home/erina/Downloads/bocchipaper2.png" ];
+
+				wallpaper = [
+					"DP-1, /home/erina/Downloads/bocchipaper2.png"
+				];
+			};
+	};
+
 	# Hyprland settings
 	wayland.windowManager.hyprland = {
 		enable = true;
@@ -159,23 +177,6 @@
 				);
 			"exec-once" = ["hyprpaper"  "waybar"];
 		};
-	};
-
-	services.hyprpaper = {
-		enable = true;
-		settings = 
-			{
-				ipc = "on";
-				splash = false;
-				splash_offset = 2.0;
-
-				preload =
-					[ "~/Downloads/bocchipaper2.png" ];
-
-				wallpaper = [
-					"DP-1, ~/Downloads/bocchipaper2.png"
-				];
-			};
 	};
 
 	# Waybar settings
