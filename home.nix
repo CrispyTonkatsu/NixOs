@@ -7,7 +7,6 @@
 		./home-modules/kitty.nix
 		./home-modules/waybar.nix
 		./home-modules/hyprland.nix
-		./home-modules/hyprpaper.nix
 		./home-modules/zoxide.nix
 		./home-modules/starship.nix
 	];
