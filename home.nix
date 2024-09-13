@@ -176,8 +176,11 @@
 					)
 						9)
 				);
-			"exec-once" = "hyprpaper && waybar";
 		};
+		extraConfig = ''
+			exec-once = hyprpaper
+			exec-once = waybar
+		'';
 	};
 
 	# Waybar settings
