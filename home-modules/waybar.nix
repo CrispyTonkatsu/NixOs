@@ -5,8 +5,8 @@
   pkgs,
   ...
 }: let
-  waybar_config = import ./nixbar/config.nix {inherit osConfig config lib pkgs;};
-  waybar_style = import ./nixbar/style.nix {inherit (config) colorscheme;};
+  waybar_config = import ./config.nix {inherit osConfig config lib pkgs;};
+  waybar_style = import ./style.nix {inherit (config) colorscheme;};
 in {
   home.packages = with pkgs; [playerctl];
 
