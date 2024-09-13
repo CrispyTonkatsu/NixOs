@@ -47,6 +47,9 @@
 		pkgs.rofi-wayland
 		pkgs.obsidian
 		pkgs.vesktop
+		pkgs.zathura
+		pkgs.mpv
+		pkgs.sxiv
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -98,6 +101,7 @@
 		"video/png" = ["mpv.desktop"];
 		"video/jpg" = ["mpv.desktop"];
 		"video/*" = ["mpv.desktop"];
+		"web-browser" = ["floorp"];
 	};
 
 	# Notification daemon

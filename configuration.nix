@@ -92,9 +92,8 @@
 		vim
 		neovim
 		cargo
-		gcc
-		clang
 		clang-tools
+		clang
 		cl
 		zig
 		lua
