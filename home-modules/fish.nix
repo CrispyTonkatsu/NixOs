@@ -1,6 +1,10 @@
 {...} : {
 	programs.fish = {
 		enable = true;
-		shellInit = "starship init fish | source";
+		shellInit = ''
+		starship init fish | source
+		set fish_greeting 
+		'';
+		
 	};
 }

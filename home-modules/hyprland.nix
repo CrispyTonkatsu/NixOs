@@ -4,6 +4,7 @@
 	wayland.windowManager.hyprland = {
 		enable = true;
 		settings = {
+			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
 			bind = [
 				"$mod, F, exec, floorp"
@@ -24,7 +25,6 @@
 					)
 						9)
 				);
-			"exec-once" = "hyprpaper";
 		};
 	};
 	
