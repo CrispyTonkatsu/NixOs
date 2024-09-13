@@ -4,6 +4,12 @@
 	imports = [
 		./git.nix
 		./home-modules/fish.nix
+		./home-modules/kitty.nix
+		./home-modules/waybar.nix
+		./home-modules/hyprland.nix
+		./home-modules/hyprpaper.nix
+		./home-modules/zoxide.nix
+		./home-modules/starship.nix
 	];
 
 	# Home Manager needs a bit of information about you and the paths it should
@@ -27,10 +33,6 @@
 	# The home.packages option allows you to install Nix packages into your
 	# environment.
 	home.packages = [
-		# # Adds the 'hello' command to your environment. It prints a friendly
-		# # "Hello, world!" when run.
-		# pkgs.hello
-
 		# # It is sometimes useful to fine-tune packages, for example, by applying
 		# # overrides. You can do that directly here, just don't forget the
 		# # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -90,8 +92,6 @@
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
 
-	# MODULARIZE THE FOLLOWING
-
 	# Default apps
 	xdg.mimeApps.defaultApplications = {
 		"text/plain" = ["nvim"];
@@ -102,87 +102,8 @@
 		"video/*" = ["mpv.desktop"];
 	};
 
-	# Programs
-	programs.zoxide.enable = true;
-
-	programs.kitty = {
-		enable = true;
-		font.name = "JetBrainsMono Nerd Font Mono";
-		settings = {
-			background_opacity = "0.9";
-			confirm_os_window_close = 0;
-			copy_on_select = true;
-			clipboard_control = "write-clipboard read-clipboard write-primary";
-			font_size = 15;
-			cursor_shape = "block";
-		};
-
-	};
-
-	programs.starship = {
-		enable = true;
-		settings = {
-			add_newline = false;
-		};
-	};
-
-
 	# Notification daemon
 	services = {
 		mako.enable = true;
-	};
-
-# Wallpaper settings
-	services.hyprpaper = {
-		enable = true;
-		settings = 
-			{
-				ipc = "on";
-				splash = false;
-				splash_offset = 2.0;
-
-				preload =
-					[ "/home/erina/Downloads/bocchipaper2.png" ];
-
-				wallpaper = [
-					"eDP-1, /home/erina/Downloads/bocchipaper2.png"
-				];
-			};
-	};
-
-	# Hyprland settings
-	wayland.windowManager.hyprland = {
-		enable = true;
-		settings = {
-			"$mod" = "SUPER";
-			bind = [
-				"$mod, F, exec, floorp"
-				"$mod, Q, killactive"
-				"$mod, SPACE,exec, rofi -show drun -show-icons"
-				"$mod, P, exec, kitty"
-				"$mod, M, fullscreen"
-			]
-				++ (
-					# workspaces bindings
-					# binds $mod + SHIFT to move between workspaces
-					builtins.concatLists(builtins.genList (i:
-						let ws = i + 1;
-						in [
-							"$mod, code:1${toString i}, workspace, ${toString ws}"
-							"$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-						]
-					)
-						9)
-				);
-		};
-		extraConfig = ''
-			exec-once = hyprpaper
-			exec-once = waybar
-		'';
-	};
-
-	# Waybar settings
-	programs.waybar = {
-		enable = true;
 	};
 }
