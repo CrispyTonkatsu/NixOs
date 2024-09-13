@@ -97,7 +97,7 @@
 		cl
 		zig
 		lua
-		luajitPackages.luarocks-nix
+		luajitPackages
 		python3
 		ripgrep
 	];

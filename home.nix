@@ -8,6 +8,7 @@
 		./home-modules/hyprland.nix
 		./home-modules/zoxide.nix
 		./home-modules/starship.nix
+		./home-modules/nvim.nix
 	];
 
 	# Home Manager needs a bit of information about you and the paths it should
@@ -43,6 +44,7 @@
 		# (pkgs.writeShellScriptBin "my-hello" ''
 		#   echo "Hello, ${config.home.username}!"
 		# '')
+		# Desktop apps
 		pkgs.floorp
 		pkgs.rofi-wayland
 		pkgs.obsidian
@@ -50,6 +52,7 @@
 		pkgs.zathura
 		pkgs.mpv
 		pkgs.sxiv
+
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
