@@ -4,7 +4,6 @@
 		defaultEditor = true;
 		vimAlias = true;
 		viAlias = true;
-		home.packages = with pkgs; [neovide wl-clipboard];
 
 		extraPackages = with pkgs; [
 			# Formatters
@@ -22,4 +21,5 @@
 			clang
 		];
 	};
+	home.packages = with pkgs; [neovide wl-clipboard];
 }
