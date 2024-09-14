@@ -40,7 +40,6 @@
 	programs = {
 		nix-ld.enable = true;
 		fish.enable = true;
-		brightnessctl = true;
 	};
 
 # Hyprland environment vars
@@ -98,6 +97,7 @@
 		lua
 		python3
 		ripgrep
+		brightnessctl
 	];
 
 # This value determines the NixOS release from which the default
