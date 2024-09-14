@@ -6,17 +6,7 @@
 		viAlias = true;
 
 		extraPackages = with pkgs; [
-			# Formatters
-			gofumpt
-			goimports-reviser
-			golines
-
-			# LSP
-			gopls
 			clang-tools
-
-			# Tools
-			go
 			gcc
 			clang
 		];
