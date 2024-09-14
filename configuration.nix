@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed oncon
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -69,7 +69,8 @@
 		description = "erina";
 		extraGroups = [ "networkmanager" "wheel" ];
 		shell = pkgs.fish;
-		packages = with pkgs; [];
+		packages = with pkgs; [
+		];
 	};
 
 # Home Manager
@@ -97,7 +98,6 @@
 		cl
 		zig
 		lua
-		luajitPackages
 		python3
 		ripgrep
 	];

@@ -4,17 +4,22 @@
 		defaultEditor = true;
 		vimAlias = true;
 		viAlias = true;
+		home.packages = with pkgs; [neovide wl-clipboard];
+
 		extraPackages = with pkgs; [
-      # Formatters
-      gofumpt
-      goimports-reviser
-      golines
+			# Formatters
+			gofumpt
+			goimports-reviser
+			golines
 
-      # LSP
-      gopls
+			# LSP
+			gopls
+			clang-tools
 
-      # Tools
-      go
-      gcc];
+			# Tools
+			go
+			gcc
+			clang
+		];
 	};
 }
