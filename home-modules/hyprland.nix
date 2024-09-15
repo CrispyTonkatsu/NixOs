@@ -2,6 +2,12 @@
 
 	wayland.windowManager.hyprland = {
 		enable = true;
+
+		extraConfig = ''
+			monitor = eDP-1, preferred, auto, 2
+			monitor = DP-4, preferred, auto, 2
+		'';
+
 		settings = {
 			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
