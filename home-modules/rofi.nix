@@ -1,7 +1,7 @@
 {...} : {
-	programs.rofi{
+	programs.rofi = {
 		enabled = true;
-		terminal = kitty;
+		terminal = "kitty";
 		theme = "DarkBlue";
 	};
 }
