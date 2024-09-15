@@ -98,6 +98,7 @@
 		python3
 		ripgrep
 		brightnessctl
+		playerctl
 	];
 
 # This value determines the NixOS release from which the default
