@@ -5,12 +5,15 @@
 		settings = {
 			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
+
 			bind = [
-				"$mod, F, exec, floorp"
 				"$mod, Q, killactive"
 				"$mod, SPACE, exec, rofi -show drun -show-icons"
-				"$mod, P, exec, kitty"
+				"$mod, \, exec, kitty"
 				"$mod, M, fullscreen"
+				"$mod, "
+				",, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+				",, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
 			]
 				++ (
 					# workspaces bindings
