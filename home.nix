@@ -9,6 +9,7 @@
 		./home-modules/zoxide.nix
 		./home-modules/starship.nix
 		./home-modules/nvim.nix
+		./home-modules/rofi.nix
 	];
 
 	# Home Manager needs a bit of information about you and the paths it should
@@ -46,7 +47,6 @@
 		# '')
 		# Desktop apps
 		pkgs.floorp
-		pkgs.rofi-wayland
 		pkgs.obsidian
 		pkgs.vesktop
 		pkgs.zathura

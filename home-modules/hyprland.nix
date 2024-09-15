@@ -1,6 +1,5 @@
 {...} : {
 
-
 	wayland.windowManager.hyprland = {
 		enable = true;
 		settings = {
@@ -9,7 +8,7 @@
 			bind = [
 				"$mod, F, exec, floorp"
 				"$mod, Q, killactive"
-				"$mod, SPACE,exec, rofi -show drun -show-icons"
+				"$mod, SPACE, exec, rofi -show drun -show-icons"
 				"$mod, P, exec, kitty"
 				"$mod, M, fullscreen"
 			]
@@ -27,5 +26,4 @@
 				);
 		};
 	};
-	
 }
