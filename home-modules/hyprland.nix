@@ -9,6 +9,8 @@
 
 			env = HYPRCUROR_SIZE, 60
 			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
+
+			exec-once = waybar
 		'';
 
 		settings = {
