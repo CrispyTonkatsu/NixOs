@@ -99,6 +99,7 @@
 		ripgrep
 		brightnessctl
 		playerctl
+		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 	];
 
 # This value determines the NixOS release from which the default
