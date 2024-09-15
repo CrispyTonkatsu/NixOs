@@ -7,8 +7,8 @@
 			monitor = eDP-1, preferred, auto, 2
 			monitor = DP-4, preferred, auto, 2
 
-			env = HYPRCURSOR_THEME, rose-pine
-			env = HYPRCUROR_SIZE, 24
+			env = HYPRCUROR_SIZE, 60
+			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
 		'';
 
 		settings = {
