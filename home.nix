@@ -10,6 +10,7 @@
 		./home-modules/starship.nix
 		./home-modules/nvim.nix
 		./home-modules/rofi.nix
+		./home-modules/themes/rose-pine-hyprcursor.nix
 	];
 
 	# Home Manager needs a bit of information about you and the paths it should
