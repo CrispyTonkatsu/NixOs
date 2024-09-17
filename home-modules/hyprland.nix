@@ -38,8 +38,8 @@
 				"$modSHIFT, L, movewindow ,r"
 				"$modSHIFT, J, movewindow ,d"
 				"$modSHIFT, K, movewindow ,u"
-				"$mod CTRL SHIFT, J, movewindow, +1"
-				"$mod CTRL SHIFT, K, movewindow, -1"
+				"$mod CTRL SHIFT, J, movetoworkspace, +1"
+				"$mod CTRL SHIFT, K, movetoworkspace, -1"
 
 				# Monitor management
 				", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
