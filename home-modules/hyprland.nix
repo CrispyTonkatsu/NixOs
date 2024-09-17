@@ -30,12 +30,16 @@
 				"$mod, L, movefocus ,r"
 				"$mod, J, movefocus ,d"
 				"$mod, K, movefocus ,u"
+				"$mod CTRL, J, workspace, +1"
+				"$mod CTRL, K, workspace, -1"
 
 				# Window movement
 				"$modSHIFT, H, movewindow ,l"
 				"$modSHIFT, L, movewindow ,r"
 				"$modSHIFT, J, movewindow ,d"
 				"$modSHIFT, K, movewindow ,u"
+				"$mod CTRL SHIFT, J, movewindow, +1"
+				"$mod CTRL SHIFT, K, movewindow, -1"
 
 				# Monitor management
 				", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
