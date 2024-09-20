@@ -6,6 +6,7 @@
 		extraConfig = ''
 			monitor = eDP-1, preferred, auto, 2
 			monitor = DP-4, preferred, auto, 2
+			monitor = DP-5, preferred, auto, 2
 
 			env = HYPRCUROR_SIZE, 60
 			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
@@ -30,16 +31,17 @@
 				"$mod, L, movefocus ,r"
 				"$mod, J, movefocus ,d"
 				"$mod, K, movefocus ,u"
-				"$mod CTRL, J, workspace, +1"
-				"$mod CTRL, K, workspace, -1"
+				"$mod CTRL, J, workspace, r+1"
+				"$mod CTRL, K, workspace, r-1"
 
 				# Window movement
 				"$modSHIFT, H, movewindow ,l"
 				"$modSHIFT, L, movewindow ,r"
 				"$modSHIFT, J, movewindow ,d"
 				"$modSHIFT, K, movewindow ,u"
-				"$mod CTRL SHIFT, J, movetoworkspace, +1"
-				"$mod CTRL SHIFT, K, movetoworkspace, -1"
+				"$mod CTRL SHIFT, J, movetoworkspace, r+1"
+				"$mod CTRL SHIFT, K, movetoworkspace, r-1"
+				"$mod, C, centerwindow"
 
 				# Monitor management
 				", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
