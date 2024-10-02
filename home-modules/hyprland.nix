@@ -25,6 +25,9 @@
 				"$mod, Q, killactive"
 				"$mod, M, fullscreen"
 				"$mod, F, togglefloating"
+				"$mod, C, centerwindow"
+				"$mod, C, centerwindow"
+				"$mod, mouse_down, resizewindow"
 
 				# Focus movement
 				"$mod, H, movefocus ,l"
@@ -41,7 +44,6 @@
 				"$modSHIFT, K, movewindow ,u"
 				"$mod CTRL SHIFT, J, movetoworkspace, r+1"
 				"$mod CTRL SHIFT, K, movetoworkspace, r-1"
-				"$mod, C, centerwindow"
 
 				# Monitor management
 				", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
