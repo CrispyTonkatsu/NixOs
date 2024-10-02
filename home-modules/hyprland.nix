@@ -79,11 +79,11 @@
 				"SUPER, mouse:272, movewindow" 
 				"SUPER, mouse:273, movewindow" 
 			];
+			xwayland = {
+				force_zero_scaling = true;
+				use_nearest_neighbor = true;
+			};
 		};
 
-		xwayland = {
-			force_zero_scaling = true;
-			use_nearest_neighbor = true;
-		};
 	};
 }
