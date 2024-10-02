@@ -27,7 +27,6 @@
 				"$mod, F, togglefloating"
 				"$mod, C, centerwindow"
 				"$mod, C, centerwindow"
-				"$mod, mouse_down, resizewindow"
 
 				# Focus movement
 				"$mod, H, movefocus ,l"
@@ -79,8 +78,9 @@
 
 			bindm = [ 
 				"SUPER, mouse:272, movewindow" 
-				"SUPER, mouse:273, movewindow" 
+				"SUPER, mouse:273, resizewindow" 
 			];
+
 			xwayland = {
 				force_zero_scaling = true;
 				use_nearest_neighbor = true;
