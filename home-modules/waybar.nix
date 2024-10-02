@@ -1,6 +1,6 @@
 {...} : {
 	programs.waybar = {
 		enable = true;
-		style = ./themes/waybar.css;
+		# style = ./themes/waybar.css;
 	};
 }
