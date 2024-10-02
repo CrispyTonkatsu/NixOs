@@ -53,6 +53,8 @@
 		pkgs.zathura
 		pkgs.mpv
 		pkgs.sxiv
+		pkgs.xournalpp
+		pkgs.jetbrains.clion
 
 	];
 
