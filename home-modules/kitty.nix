@@ -3,7 +3,7 @@
 		enable = true;
 		font.name = "JetBrainsMono Nerd Font Mono";
 		shellIntegration.enableFishIntegration = true;
-		theme = "Afterglow";
+		theme = "Rosé Pine";
 		settings = {
 			background_opacity = "0.9";
 			confirm_os_window_close = 0;
