@@ -8,6 +8,8 @@
 			monitor = DP-4, preferred, auto, 2
 			monitor = DP-5, preferred, auto, 2
 
+			input:touchpad:natural_scroll = true
+
 			env = HYPRCUROR_SIZE, 60
 			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
 

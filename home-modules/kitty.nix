@@ -9,7 +9,7 @@
 			confirm_os_window_close = 0;
 			copy_on_select = true;
 			clipboard_control = "write-clipboard read-clipboard write-primary";
-			font_size = 16;
+			font_size = 14;
 			cursor_shape = "block";
 			disable_ligatures = true;
 		};
