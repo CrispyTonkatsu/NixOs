@@ -1,128 +1,84 @@
-* {
-	font-family: JetBrainsMono Nerd Font Mono;
-	font-size: 17;
-	min-height: 34px;
-	min-width: 34px;
-	border-radius: 0px;
-	margin-bottom: 1px;
-	transition-delay: 0s;
-}
+/*
 
-@define-color background_box rgba(80,80,80,0.1);
-@define-color border_box #606060; /* border and shadow color */
-@define-color background_active_box rgba(180, 180, 240,0.3);
+██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+Waybar Config File by Arfan Zubi
+
+*/
+
+* {
+    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
 
 window#waybar {
-	background: alpha(@theme_base_color,0.7);
-	border: 2px solid #606060;
+    background: rgba(45, 53, 59, 0.9);
+    border: 2px solid rgba(61, 72, 77, 0.9);
+    color: #D3C6AA;
 }
 
-tooltip {
-	background: alpha(@theme_base_color,0.5);
-	border: 2px solid @border_box;
-	border-radius: 0px;
+#window, #clock, #system, #keyboard, #hardware {
+    margin: 5px;
+    padding: 0 10px;
+    background-color: #272E33;
+    border: 2px solid #3D484D;
+    border-radius: 15px;
 }
 
-tooltip label{
-	font-family: JetBrainsMono Nerd Font Mono;
-	font-size: 17;
-	color: #FFFFFF;
+#window {
+    font-weight: bold;
 }
-
-
-#custom-ddcutil {
-	border: 2px solid @border_box;
-	background-color: @background_box;
-		border-bottom: 0px;
-	/*border-radius: 6px 6px 0px 0px;*/
-	margin-left: 6px;
-	margin-right: 6px;
-	margin-top: 6px;
-	margin-bottom: -1px;
-}
-#wireplumber {
-	border: 2px solid @border_box;
-	background-color: @background_box;
-		/*border-radius: 0px 0px 6px 6px;*/
-		border-top:0px;
-	margin-left: 6px;
-	margin-right: 6px;
-	margin-bottom: 6px;
-} 
-
-#privacy {
-	border: 2px solid @border_box;
-	background-color: @background_box;
-		/*border-radius: 0px 0px 6px 6px;*/
-		border-top:0px;
-	margin-left: 6px;
-	margin-right: 6px;
-	margin-bottom: 6px;
-}
-
-#tray {
-	margin-bottom: 8px;
-}
-
-/* Group Center */
-
-
 
 #clock {
-	border: none;
-	background: transparent;
-	min-height: 70px;
-	margin-right:6px;
-	margin-left: 6px;
-	font-weight: Bold;
-	font-size: 18px;
-}
-
-#mpris {
-	border: 2px solid @border_box;
-
-	background-color: @background_box;
-
-		border-radius: 0px;
-	font-size: 18px;
-	margin-top: -4px;
-	margin-left: 6px;
-	margin-right: 6px;
-
-	padding-top:8px;
-
-	padding-bottom: 0px;
-
-	transition-delay: 0s;
-	transition: 0.5s;
-}
-
-#mpris.playing {
-	background-color: @background_active_box;
+    background-color: #A7C080;
+    border: 2px solid #2D353B;
+    color: #2D353B;
+    font-weight: bold;
 }
 
 #workspaces {
-	background-color: @background_box;
-		border: 2px solid @border_box;
-	margin-top: 10px;
-	margin-left: 6px;
-	margin-right: 6px;
-	font-size: 20px;
-
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 #workspaces button {
-	margin-left: -22px;
-	margin-right: -14px;
-	margin-top: -3px;
-	margin-bottom: -3px;
-
-	color: rgba(255, 255, 255, 0.3);
-
-	transition-delay: 0s;
-	transition: 0.5s;
+    border: none;
+    border-radius: 0;
+    color: #D3C6AA;
+    transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active {	
-	color: #FFFFFF;
+#workspaces button.active {
+    background-color: #A7C080;
+    color: #2D353B;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.focused {
+    background-color: #A7C080;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: #3D484D;
+    border: none;
+    color: #D3C6AA;
+}
+
+#keyboard-state {
+    margin-right: 7px;
+}
+
+#custom-wlogout {
+    margin-left: 7px;
+    padding: 0 15px;
+    background-color: #A7C080;
+    color: #2D353B;
 }

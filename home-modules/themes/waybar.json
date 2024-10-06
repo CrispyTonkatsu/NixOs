@@ -1,62 +1,37 @@
+
 {
- 	"layer": "top",
-	"position":"left",
-	"modules-left": ["clock","mpris"],
-	"modules-center": ["hyprland/workspaces"], 
-	"margin-bottom": 10,
-	"margin-top":10,
-	"margin-left":5,
-	"modules-right": ["tray","custom/ddcutil","wireplumber"],
-	
-	"wireplumber": {
-	    "format-muted": "  MUTE ",
-	    "format": "  {icon} {volume}% ",
-	    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"on-click-right": "pavucontrol",
-	    "max-volume": 100,
-	    "format-icons": ["","","", "", ""],
-	    "reverse-scrolling": true,
-	    "scroll-step": 1,
-	    "rotate":90
-	},
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"show-special":true,
-		"format-icons": {
-			"default": "󰝣",
-			"discord": "󰍩",
-			"kden": "󱛿",
-			"obs": "",
-			"spotify": "",
-			"game": "󰮂",
-			"code":"󰨞",
-			"windows": ""
-		},
-		"on-click": "activate"
-	},
-	"custom/ddcutil": {
-	        "format": " 󰃝  ",
-	        "return-type": "json",
-	        "on-click": "ddcutil setvcp 10 100",
-	        "on-click-right": "ddcutil setvcp 10 0",
-	        "tooltip": false
-	    },
-	"clock": {
-        "format": "{:%H\n%M}",
-        "tooltip-format": "{:%A, %B %d, %Y (%R)}"
-	},
-	"mpris": {
-		"format": "{status_icon} {title} - {artist}",
-		"status-icons": {
-			"paused": " 󰏤 ",
-			"playing": "  "
-		},
-		"max-length":26,
-		"tooltip-format": "{status_icon} {title} - {artist}",
-		"rotate":90
-	},
-	"tray": {
-	    "icon-size": 20,
-	    "spacing": 10
-	}
+    "layer": "top",
+    "height": 40,
+
+    "include": ["$HOME/.config/waybar/modules.json"],
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["group/system", "group/keyboard", "group/hardware", "custom/wlogout"],
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "backlight",
+            "pulseaudio",
+            "network"
+        ]
+    },
+
+    "group/keyboard": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/language",
+            "keyboard-state"
+        ]
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    }
 }
