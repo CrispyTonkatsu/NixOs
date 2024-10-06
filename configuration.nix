@@ -13,6 +13,7 @@
 		./hardware-configuration.nix
 			inputs.home-manager.nixosModules.default
 			./nix-ld.nix
+			./home-modules/pcsx2.nix
 		];
 
 # Bootloader.
