@@ -63,6 +63,7 @@
 
 				# Executing programs
 				"$mod, SPACE, exec, [floating] rofi -show combi -modes combi -combi-modes \"window,drun,run\""
+				"$mod SHIFT, SPACE, exec, [floating] rofi -show combi -modes combi -combi-modes \"window,drun,run\" | nvidia-offload"
 				"$mod, RETURN, exec, kitty"
 			]
 				++ (

@@ -110,6 +110,7 @@
 		"web-browser" = ["floorp"];
 	};
 
+
 	# Notification daemon
 	services = {
 		mako.enable = true;
