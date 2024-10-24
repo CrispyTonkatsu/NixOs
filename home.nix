@@ -55,6 +55,7 @@
 		pkgs.sxiv
 		pkgs.xournalpp
 		pkgs.jetbrains.clion
+		pkgs.waybar
 
 	];
 
