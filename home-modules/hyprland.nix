@@ -83,8 +83,8 @@
 				", , exec, playerctl next"
 
 				# Executing programs
-				"$mod, SPACE, exec, tofi-drun"
-				"$mod SHIFT, SPACE, exec, tofi-drun | nvidia-offload"
+				"$mod, SPACE, exec, tofi-run | fish"
+				"$mod SHIFT, SPACE, exec, tofi-run | nvidia-offload | fish"
 				"$mod, RETURN, exec, kitty"
 			]
 				++ (

@@ -11,6 +11,7 @@
 		./home-modules/nvim.nix
 		#./home-modules/rofi.nix
 		./home-modules/tofi.nix
+		./home-modules/mako.nix
 		./home-modules/waybar.nix
 	];
 
@@ -111,11 +112,6 @@
 		"web-browser" = ["floorp"];
 	};
 
-
-	# Notification daemon
-	services = {
-		mako.enable = true;
-	};
 
 	services.hyprpaper = {
 		enable = true;
