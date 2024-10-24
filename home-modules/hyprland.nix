@@ -23,10 +23,23 @@
 			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
 
-			bindl = [
-				# Laptop Lid
-				# ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-1, disable\""
-				# ", switch:off:[switch name], exec, hyprctl keyword monitor \"eDP-1, preferred, auto, 2\""
+			general = {
+				border_size = 2;
+				"col.active_border" = "rgb(62f59f) rgb(f8fc9f) 45deg";
+			};
+
+			decoration = {
+				rounding = 3;
+			};
+
+			gestures = {
+				workspace_swipe = true;
+				workspace_swipe_invert = true;
+				workspace_swipe_create_new = false;
+			};
+
+			animation = [
+				"workspaces, 1, 3, default, slidefadevert"
 			];
 
 			bind = [
