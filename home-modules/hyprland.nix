@@ -83,8 +83,8 @@
 				", , exec, playerctl next"
 
 				# Executing programs
-				"$mod, SPACE, exec, [floating] rofi -show combi -modes combi -combi-modes \"window,drun,run\""
-				"$mod SHIFT, SPACE, exec, [floating] rofi -show combi -modes combi -combi-modes \"window,drun,run\" | nvidia-offload"
+				"$mod, SPACE, exec, tofi-drun"
+				"$mod SHIFT, SPACE, exec, tofi-drun | nvidia-offload"
 				"$mod, RETURN, exec, kitty"
 			]
 				++ (

@@ -9,7 +9,8 @@
 		./home-modules/zoxide.nix
 		./home-modules/starship.nix
 		./home-modules/nvim.nix
-		./home-modules/rofi.nix
+		#./home-modules/rofi.nix
+		./home-modules/tofi.nix
 		./home-modules/waybar.nix
 	];
 
@@ -55,7 +56,6 @@
 		pkgs.sxiv
 		pkgs.xournalpp
 		pkgs.jetbrains.clion
-		pkgs.waybar
 
 	];
 

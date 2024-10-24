@@ -1,7 +1,7 @@
 * {
     font-family: 'JetBrainsMonoNerdFont', 'Noto Sans CJK';
     font-size: 18px;
-    min-height: 0;
+    min-height: 0px;
 }
 
 window#waybar{
