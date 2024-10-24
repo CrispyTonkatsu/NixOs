@@ -7,6 +7,7 @@
 			monitor = eDP-1, preferred, auto, 2
 			monitor = DP-4, preferred, auto, 2
 			monitor = DP-5, preferred, auto, 2
+			monitor = DP-6, preferred, auto, 2
 
 			input:touchpad:natural_scroll = true
 
@@ -22,7 +23,14 @@
 			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
 
+			bindl = [
+				# Laptop Lid
+				# ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-1, disable\""
+				# ", switch:off:[switch name], exec, hyprctl keyword monitor \"eDP-1, preferred, auto, 2\""
+			];
+
 			bind = [
+
 				# Window management
 				"$mod, Q, killactive"
 				"$mod, M, fullscreen"

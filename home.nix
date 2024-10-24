@@ -124,10 +124,10 @@
 				splash = false;
 
 				preload =
-					["/home/erina/Downloads/bocchipaper2.png" ];
+					["/home/erina/Downloads/ranmapaper1.png" ];
 
 				wallpaper = [
-					", /home/erina/Downloads/bocchipaper2.png"
+					", /home/erina/Downloads/ranmapaper1.png"
 				];
 			};
 	};

@@ -109,4 +109,6 @@
     wireplumber.enable = true;
 
   };
+
+  services.logind.lidSwitchExternalPower = "ignore";
 }
