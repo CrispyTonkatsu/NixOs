@@ -90,10 +90,14 @@
 	environment.systemPackages = with pkgs; [
 #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 #  wget
-		gdb
-		bash
+		btop
+		bluetuith
+
 		vim
 		neovim
+
+		gdb
+		bash
 		cargo
 		clang-tools
 		clang
@@ -101,9 +105,12 @@
 		zig
 		lua
 		python3
+		nodejs
+
 		ripgrep
 		brightnessctl
 		playerctl
+
 		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 
 		(writeShellScriptBin "nvidia-offload" ''
