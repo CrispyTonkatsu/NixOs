@@ -11,5 +11,6 @@
 			clang
 		];
 	};
+
 	home.packages = with pkgs; [neovide wl-clipboard];
 }

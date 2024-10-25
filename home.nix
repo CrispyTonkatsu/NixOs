@@ -57,6 +57,12 @@
 		pkgs.sxiv
 		pkgs.xournalpp
 		pkgs.jetbrains.clion
+		pkgs.notify-desktop
+		pkgs.pa-notify
+
+		pkgs.rpcs3
+		pkgs.ani-cli
+		pkgs.mangal
 
 	];
 
