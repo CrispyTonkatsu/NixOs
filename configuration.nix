@@ -111,36 +111,58 @@
 		brightnessctl
 		playerctl
 
+		xdg-utils
+		xdg-desktop-portal
+		xdg-desktop-portal-gtk
+		xdg-desktop-portal-hyprland
+
+		wineWowPackages.waylandFull
+		winetricks
+		steam-run
+		mangohud
+
 		inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 
-		(writeShellScriptBin "nvidia-offload" ''
-		export __NV_PRIME_RENDER_OFFLOAD=1
-		export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-		export __GLX_VENDOR_LIBRARY_NAME=nvidia
-		export __VK_LAYER_NV_optimus=NVIDIA_only
-		exec "$@"
-		'')
+		# (writeShellScriptBin "nvidia-offload" ''
+		# export __NV_PRIME_RENDER_OFFLOAD=1
+		# export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+		# export __GLX_VENDOR_LIBRARY_NAME=nvidia
+		# export __VK_LAYER_NV_optimus=NVIDIA_only
+		# exec "$@"
+		# '')
 	];
 
-# Font setup
-fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-emoji
-  liberation_ttf
-  fira-code
-  fira-code-symbols
-  mplus-outline-fonts.githubRelease
-  dina-font
-  proggyfonts
-];
+	# Font setup
+	fonts.packages = with pkgs; [
+		noto-fonts
+		noto-fonts-cjk
+		noto-fonts-emoji
+		liberation_ttf
+		fira-code
+		fira-code-symbols
+		mplus-outline-fonts.githubRelease
+		dina-font
+		proggyfonts
+	];
 
+	# Steam setup
+	programs = {
+		gamemode.enable = true;
+		gamescope = {
+			enable = true;
+			capSysNice = true;
+		};
+		steam = {
+			enable = true;
+			gamescopeSession.enable = true;
+		};
+	};
 
-# This value determines the NixOS release from which the default
-# settings for stateful data, like file locations and database versions
-# on your system were taken. It‘s perfectly fine and recommended to leave
-# this value at the release version of the first install of this system.
-# Before changing this value read the documentation for this option
-# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+	# This value determines the NixOS release from which the default
+	# settings for stateful data, like file locations and database versions
+	# on your system were taken. It‘s perfectly fine and recommended to leave
+	# this value at the release version of the first install of this system.
+	# Before changing this value read the documentation for this option
+	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 	system.stateVersion = "23.11"; # Did you read the comment?
 }

@@ -14,7 +14,7 @@
 			env = HYPRCUROR_SIZE, 60
 			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
 
-			env = XCURSOR_SIZE, 60
+			env = XCURSOR_SIZE, 30
 
 			exec-once = waybar
 		'';
@@ -66,6 +66,8 @@
 				"$modSHIFT, K, movewindow ,u"
 				"$mod CTRL SHIFT, J, movetoworkspace, r+1"
 				"$mod CTRL SHIFT, K, movetoworkspace, r-1"
+
+				"$mod, TAB, swapactiveworkspaces, eDP-1 DP-5"
 
 				# Monitor management
 				", XF86MonBrightnessUp, exec, brightnessctl set 5%+"

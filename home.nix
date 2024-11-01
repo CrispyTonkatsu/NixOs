@@ -55,15 +55,18 @@
 		pkgs.zathura
 		pkgs.mpv
 		pkgs.sxiv
-		pkgs.xournalpp
 		pkgs.jetbrains.clion
 		pkgs.notify-desktop
 		pkgs.pa-notify
 
 		pkgs.rpcs3
-		pkgs.ani-cli
-		pkgs.mangal
 
+		pkgs.ani-cli
+
+		pkgs.gimp
+		pkgs.imagemagick
+		pkgs.poppler_utils
+		pkgs.qiv
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -134,4 +137,5 @@
 				];
 			};
 	};
+
 }

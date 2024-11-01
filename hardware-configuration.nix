@@ -8,10 +8,15 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
+  
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  # boot.initrd.kernelModules = [ "nvidia" ];
   boot.kernelModules = [ "kvm-intel" ];
+  # boot.initrd.kernelModules = [ "nvidia" ];
   # boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+
+  #backlight moment
+  boot.kernelParams = [ "acpi_backlight=video0" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/52699f90-3b06-4126-95eb-7c28400d9548";
@@ -79,20 +84,19 @@
 
 ##### Pull rq to the nix nvidia page that they should rec using nix-shell for the lshw so the user doesn't need to install it
 
-  prime = {
-	  offload = {
-		  enable = true;
-		  enableOffloadCmd = true;
-	  };
+    prime = {
+      offload = {
+	enable = true;
+	enableOffloadCmd = true;
+      };
 
-# Ibus details
-	  intelBusId = "PCI:0:2:0";
-	  nvidiaBusId = "PCI:1:0:0";
-  };
+      # Ibus details
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
 
   # Audio Card Setup
-  boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
 
   security.rtkit.enable = true;
   services.pipewire = {
