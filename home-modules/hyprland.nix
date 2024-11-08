@@ -5,6 +5,7 @@
 
 		extraConfig = ''
 			monitor = eDP-1, preferred, auto, 2
+			monitor = HDMI-A-3, preferred, auto-left, 2
 			monitor = DP-4, preferred, auto, 2
 			monitor = DP-5, preferred, auto, 2
 			monitor = DP-6, preferred, auto, 2

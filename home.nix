@@ -67,6 +67,8 @@
 		pkgs.imagemagick
 		pkgs.poppler_utils
 		pkgs.qiv
+
+		pkgs.gitkraken
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
