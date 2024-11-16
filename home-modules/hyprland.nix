@@ -5,7 +5,7 @@
 
 		extraConfig = ''
 			monitor = eDP-1, preferred, auto, 2
-			monitor = HDMI-A-3, preferred, auto-left, 2
+			monitor = HDMI-A-3, preferred, auto-left, 1
 			monitor = DP-4, preferred, auto, 2
 			monitor = DP-5, preferred, auto, 2
 			monitor = DP-6, preferred, auto, 2
@@ -20,6 +20,7 @@
 			exec-once = waybar
 		'';
 
+
 		settings = {
 			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
@@ -27,6 +28,15 @@
 			general = {
 				border_size = 2;
 				"col.active_border" = "rgb(62f59f) rgb(f8fc9f) 45deg";
+			};
+
+			input = {
+				# kb_layout = ["us" "jp"];
+				# kb_variant = ",qwerty";
+				kb_options = [
+					# "grp:alt_shift_toggle"
+					"caps:swapescape"
+				];
 			};
 
 			decoration = {
@@ -44,6 +54,8 @@
 			];
 
 			bind = [
+				# Game Mode
+				"$mod, F1, exec, ./scripts/gamemode.sh"
 
 				# Window management
 				"$mod, Q, killactive"

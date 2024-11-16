@@ -40,7 +40,7 @@
 		# # overrides. You can do that directly here, just don't forget the
 		# # parentheses. Maybe you want to install Nerd Fonts with a limited number of
 		# # fonts?
-		(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+		(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Noto" "UbuntuMono"]; })
 
 		# # You can also create simple shell scripts directly inside your
 		# # configuration. For example, this adds a command 'my-hello' to your
@@ -69,6 +69,7 @@
 		pkgs.qiv
 
 		pkgs.gitkraken
+    pkgs.masterpdfeditor
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage

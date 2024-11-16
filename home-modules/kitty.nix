@@ -1,7 +1,7 @@
 {...} : {
 	programs.kitty = {
 		enable = true;
-		font.name = "JetBrainsMono Nerd Font Mono";
+		font.name = "NotoSansMono Nerd Font Mono";
 		shellIntegration.enableFishIntegration = true;
 		theme = "Ayu Mirage";
 		settings = {
@@ -11,7 +11,7 @@
 			clipboard_control = "write-clipboard read-clipboard write-primary";
 			font_size = 14;
 			cursor_shape = "block";
-			disable_ligatures = true;
+			disable_ligatures = "always";
 		};
 	};
 }
