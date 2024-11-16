@@ -55,7 +55,7 @@
 
 			bind = [
 				# Game Mode
-				"$mod, F1, exec, ./scripts/gamemode.sh"
+				"$mod, F1, exec, ~/.nixos/home-modules/scripts/gamemode.sh"
 
 				# Window management
 				"$mod, Q, killactive"
