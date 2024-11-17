@@ -18,6 +18,8 @@
 			env = XCURSOR_SIZE, 30
 
 			exec-once = waybar
+
+			exec-once = pa-notify
 		'';
 
 
@@ -128,6 +130,6 @@
 				use_nearest_neighbor = true;
 			};
 		};
-
 	};
+
 }
