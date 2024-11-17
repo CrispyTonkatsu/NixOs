@@ -10,7 +10,6 @@
 			copy_on_select = true;
 			clipboard_control = "write-clipboard read-clipboard write-primary";
 			font_size = 14;
-			cursor_shape = "block";
 			disable_ligatures = "always";
 		};
 	};

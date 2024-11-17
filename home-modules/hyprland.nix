@@ -31,10 +31,13 @@
 			};
 
 			input = {
-				# kb_layout = ["us" "jp"];
-				# kb_variant = ",qwerty";
+				kb_layout = "us";
+				kb_variant = [
+					",qwerty" 
+					# "intl"
+				];
 				kb_options = [
-					# "grp:alt_shift_toggle"
+					"grp:alt_shift_toggle"
 					"caps:swapescape"
 				];
 			};
