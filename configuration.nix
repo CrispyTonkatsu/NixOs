@@ -92,6 +92,7 @@
 #  wget
 		btop
 		bluetuith
+		rquickshare
 
 		vim
 		neovim
@@ -99,8 +100,10 @@
 		gdb
 		bash
 		cargo
+
 		clang-tools
 		clang
+
 		cl
 		zig
 		lua

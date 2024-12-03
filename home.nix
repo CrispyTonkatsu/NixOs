@@ -43,8 +43,8 @@
 		(pkgs.nerdfonts.override { fonts = [ 
 			"Noto" 
 			"JetBrainsMono" 
-			"UbuntuMono"]; 
-		})
+			"UbuntuMono"
+		];})
 
 		# # You can also create simple shell scripts directly inside your
 		# # configuration. For example, this adds a command 'my-hello' to your
@@ -53,15 +53,18 @@
 		#   echo "Hello, ${config.home.username}!"
 		# '')
 		# Desktop apps
+		pkgs.nyxt
 		pkgs.floorp
 		pkgs.obsidian
 		pkgs.vesktop
 		pkgs.zathura
 		pkgs.mpv
 		pkgs.sxiv
-		pkgs.jetbrains.clion
 		pkgs.notify-desktop
 		pkgs.pa-notify
+		pkgs.hyprshot
+
+		pkgs.jetbrains.clion
 
 		pkgs.rpcs3
 
@@ -75,6 +78,7 @@
 		pkgs.gitkraken
 		pkgs.masterpdfeditor
 
+		pkgs.mermaid-cli
 	];
 
 	# Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -138,10 +142,10 @@
 				splash = false;
 
 				preload =
-					["/home/erina/Downloads/ranmapaper3.jpg" ];
+					["/home/erina/Downloads/wallpapers/RanmaPaper2.jpg" ];
 
 				wallpaper = [
-					", /home/erina/Downloads/ranmapaper3.jpg"
+					", /home/erina/Downloads/wallpapers/RanmaPaper2.jpg"
 				];
 			};
 	};

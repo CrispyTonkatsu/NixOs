@@ -5,22 +5,22 @@
 }
 
 window#waybar{
-    background: rgba(219, 217, 218, 0.0);
+    background: rgba(70,36,44, 0.8);
     border: 0px solid rgba(0, 0, 0, 0.0);
-    color: #D3B76D;
+    color: #fbe4dc;
 }
 
 #network, #clock, #battery #language{
     padding: 0 15px;
-    color: #D3B76D;
+    color: #fbe4dc;
 }
 
 #window {
     padding: 0 15px;
     font-weight: bold;
-    color: #559887;
+    color: #c0c5d4;
 
     border-width: 2px; 
-    border-color: #559887;
+    border-color: #c0c5d4;
     border-bottom-style: solid;
 }

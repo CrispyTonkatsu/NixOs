@@ -29,7 +29,7 @@
 
 			general = {
 				border_size = 2;
-				"col.active_border" = "rgb(62f59f) rgb(f8fc9f) 45deg";
+				"col.active_border" = "rgb(944956) rgb(c0c5d4) 45deg";
 			};
 
 			input = {
