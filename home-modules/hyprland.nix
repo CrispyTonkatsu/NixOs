@@ -20,11 +20,12 @@
 			exec-once = waybar
 
 			exec-once = pa-notify
+
+			exec-once = hyprpaper
 		'';
 
 
 		settings = {
-			"exec-once" = "hyprpaper";
 			"$mod" = "SUPER";
 
 			general = {
