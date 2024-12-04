@@ -9,7 +9,7 @@
 		./home-modules/zoxide.nix
 		./home-modules/starship.nix
 		./home-modules/nvim.nix
-		#./home-modules/rofi.nix
+		./home-modules/zathura.nix
 		./home-modules/tofi.nix
 		./home-modules/mako.nix
 		./home-modules/waybar.nix
@@ -57,7 +57,6 @@
 		pkgs.floorp
 		pkgs.obsidian
 		pkgs.vesktop
-		pkgs.zathura
 		pkgs.mpv
 		pkgs.sxiv
 		pkgs.notify-desktop
