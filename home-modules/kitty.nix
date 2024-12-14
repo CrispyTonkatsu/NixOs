@@ -3,7 +3,8 @@
 		enable = true;
 		font.name = "NotoSansMono Nerd Font Mono";
 		shellIntegration.enableFishIntegration = true;
-		theme = "Everforest Dark Medium";
+		theme = "Ayu";
+		# theme = "Everforest Dark Medium";
 		settings = {
 			background_opacity = "0.9";
 			confirm_os_window_close = 0;
