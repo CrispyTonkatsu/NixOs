@@ -21,6 +21,8 @@
 
 			exec-once = pa-notify
 
+			exec-once = fctix5
+
 			exec-once = hyprpaper
 		'';
 
@@ -33,15 +35,15 @@
 				"col.active_border" = "rgb(944956) rgb(c0c5d4) 45deg";
 			};
 
+			# TODO: Make this work with many keyboard layouts
 			input = {
-				kb_layout = "us";
+				kb_layout = ["us" "us"];
 				kb_variant = [
-					",qwerty" 
-					# "intl"
+					",intl"
 				];
 				kb_options = [
-					"grp:alt_shift_toggle"
-					"caps:swapescape"
+					"grp:alt_space_toggle"
+					"caps:escape"
 				];
 			};
 

@@ -36,6 +36,14 @@
 	# The home.packages option allows you to install Nix packages into your
 	# environment.
 	home.packages = [
+		# # You can also create simple shell scripts directly inside your
+		# # configuration. For example, this adds a command 'my-hello' to your
+		# # environment=
+		# (pkgs.writeShellScriptBin "my-hello" ''
+		#   echo "Hello, ${config.home.username}!"
+		# '')
+
+		# Desktop apps
 		# # It is sometimes useful to fine-tune packages, for example, by applying
 		# # overrides. You can do that directly here, just don't forget the
 		# # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -46,22 +54,24 @@
 			"UbuntuMono"
 		];})
 
-		# # You can also create simple shell scripts directly inside your
-		# # configuration. For example, this adds a command 'my-hello' to your
-		# # environment=
-		# (pkgs.writeShellScriptBin "my-hello" ''
-		#   echo "Hello, ${config.home.username}!"
-		# '')
-		# Desktop apps
-		pkgs.nyxt
+		pkgs.notify-desktop
+		pkgs.pa-notify
+		pkgs.hyprshot
+
+		pkgs.dolphin
+		pkgs.fcitx5-mozc
+		pkgs.vial
+		pkgs.via
+
 		pkgs.floorp
+		pkgs.zed
+		pkgs.ungoogled-chromium
+		pkgs.youtube-tui
+
 		pkgs.obsidian
 		pkgs.vesktop
 		pkgs.mpv
 		pkgs.sxiv
-		pkgs.notify-desktop
-		pkgs.pa-notify
-		pkgs.hyprshot
 
 		pkgs.jetbrains.clion
 
@@ -93,9 +103,6 @@
 		#   org.gradle.console=verbose
 		#   org.gradle.daemon.idletimeout=3600000
 		# '';
-
-		#		(pkgs.kitty-themes.override { theme = [ "JetBrainsMono" ]; })
-
 	};
 
 	# Home Manager can also manage your environment variables through
@@ -130,6 +137,7 @@
 		"video/jpg" = ["mpv.desktop"];
 		"video/*" = ["mpv.desktop"];
 		"web-browser" = ["floorp"];
+		"inode/directory" = ["dolphin"];
 	};
 
 

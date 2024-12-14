@@ -23,9 +23,9 @@
 				};
 				"hyprland/language" = {
 					format = "{}";
-					"format-en" = "en";
-					"format-es" = "sp";
-					"format-jp" = "jp";
+					"format-en"= "US";
+					"format-en-intl"= "INTL";
+					"format-jp" = "JP";
 				};
 				battery = {
 					format = "{capacity}%";

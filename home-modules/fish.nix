@@ -7,7 +7,8 @@
 		alias d="ninja -C ./build/debug/ -j(nproc)"
 		alias dev="nix develop -c fish"
 		alias nsp="nix-shell --run fish -p"
-		fish_vi_key_bindings
+		fish_default_key_bindings
 		'';
+		#fish_vi_key_bindings
 	};
 }
