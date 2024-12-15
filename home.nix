@@ -149,10 +149,10 @@
 				splash = false;
 
 				preload =
-					["/home/erina/Downloads/wallpapers/SakuraPaper.jpg" ];
+					[", ./home-modules/themes/SakuraPaper.jpg" ];
 
 				wallpaper = [
-					", /home/erina/Downloads/wallpapers/SakuraPaper.jpg"
+					", ./home-modules/themes/SakuraPaper.jpg"
 				];
 			};
 	};
