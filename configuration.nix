@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nix-ld.nix
       ./core-modules/steam.nix
@@ -54,7 +55,7 @@
   users.users.erina = {
     isNormalUser = true;
     description = "erina";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       neovim
@@ -75,6 +76,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    pkgs.nixd
+
     zip
     unzip
 
@@ -104,6 +107,9 @@
     xdg-desktop-portal-hyprland
   ];
 
+  # Options using the pkgs
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -132,7 +138,7 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
   # fonts
-  fonts.packages = with pkgs; [ 
+  fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
