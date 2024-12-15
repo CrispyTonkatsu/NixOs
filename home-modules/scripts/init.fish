@@ -1,5 +1,5 @@
 starship init fish | source
-set fish_greeting (random choice "We are so winning" "We are so losing")
+set fish_greeting (date)
 
 fish_default_key_bindings
 

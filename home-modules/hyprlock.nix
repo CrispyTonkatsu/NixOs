@@ -1,4 +1,5 @@
 {...} : {
+	# TODO: learn how to set this up so that this is what we boot to
 	programs.hyprlock = {
 		enable = true;
 		settings = {
@@ -11,7 +12,7 @@
 			};
 
 			background = {
-				path = "./themes/BocchiPaper.jpg";
+				path = "~/.nixos/home-modules/themes/Monogatari.png";
 				blur_passes = 3;
 				blur_size = 8;
 			};
@@ -27,7 +28,7 @@
 					inner_color = "rgb(91, 96, 120)";
 					outer_color = "rgb(24, 25, 38)";
 					outline_thickness = 5;
-					placeholder_text = '\'<span foreground="##cad3f5">Password...</span>'\';
+					placeholder_text = "'\'<span foreground=\"##cad3f5\">Password...</span>'\'";
 					shadow_passes = 2;
 				}
 			];

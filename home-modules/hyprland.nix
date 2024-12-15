@@ -1,4 +1,4 @@
-{...} : {
+{pkgs, ...} : {
 	wayland.windowManager.hyprland = {
 		enable = true;
 
@@ -15,10 +15,7 @@
 			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
 
 			env = XCURSOR_SIZE, 30
-
-			exec-once = fctix5
 		'';
-
 
 		settings = {
 			"$mod" = "SUPER";
@@ -27,11 +24,14 @@
 				"waybar"
 				"hyprpaper"
 				"pa-notify"
+				"fctix5"
 			];
 
 			general = {
 				border_size = 2;
 				"col.active_border" = "rgb(944956) rgb(c0c5d4) 45deg";
+				gaps_in = 5;
+				gaps_out = 5;
 			};
 
 			# TODO: Make this work with many keyboard layouts
@@ -100,9 +100,6 @@
 
 				# Requires playerctl
 				", XF86AudioPlay, exec, playerctl play-pause"
-				# TODO: get these two lines to actually do sth
-				", , exec, playerctl previous"
-				", , exec, playerctl next"
 
 				# Executing programs
 				"$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
@@ -132,5 +129,9 @@
 				use_nearest_neighbor = true;
 			};
 		};
+
+		plugins = with pkgs;[
+			hyprlandPlugins.hyprtrails
+		];
 	};
 }
