@@ -8,6 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
@@ -93,8 +94,7 @@
     };
   };
 
-  # Audio Card Setup
-
+  # Audio Setup
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -102,18 +102,13 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    jack.enable = true;
+    #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     # media-session.enable = true;
     wireplumber.enable = true;
-
   };
-
-  # More audio stuff (it affects fmod)
-  # hardware.pulseaudio.enable = true;
-  # hardware.pulseaudio.support32Bit = true;    ## If compatibility with 32-bit applications is desired.;
 
   services.logind.lidSwitchExternalPower = "ignore";
 

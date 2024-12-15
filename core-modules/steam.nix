@@ -1,6 +1,5 @@
 { config, pkgs, inputs, ... }:{
 # Steam setup
-boot.kernelPackages = pkgs.linuxPackages; # (this is the default) some amdgpu issues on 6.10
 programs = {
   gamescope = {
     enable = true;
