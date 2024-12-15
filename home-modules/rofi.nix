@@ -2,7 +2,7 @@
     programs.rofi = {
 	enable = true;
 	location = "top";
-	font = "JetBrainsMono Nerd Font";
+	# font = "Noto Sans";
 	package = pkgs.rofi-wayland;
 	theme = "~/.nixos/home-modules/themes/rofi-everforest.rasi";
     };

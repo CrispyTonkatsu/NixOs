@@ -50,16 +50,16 @@
     description = "erina";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    	neovim
+      neovim
     ];
   };
 
   # home-manager import
   home-manager = {
-  extraSpecialArgs = { inherit inputs; };
-  users = {
-  erina = import ./home.nix;
-  };
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      erina = import ./home.nix;
+    };
   };
 
   # Allow unfree packages
@@ -71,30 +71,30 @@
     zip
     unzip
 
-		btop
-		neovim
+    btop
+    neovim
 
-		bash
-		cargo
+    bash
+    cargo
 
-		gdb
-		clang-tools
-		clang
+    gdb
+    clang-tools
+    clang
 
-		cl
-		zig
-		lua
-		python3
-		nodejs
+    cl
+    zig
+    lua
+    python3
+    nodejs
 
-		ripgrep
-		brightnessctl
-		playerctl
+    ripgrep
+    brightnessctl
+    playerctl
 
-		xdg-utils
-		xdg-desktop-portal
-		xdg-desktop-portal-gtk
-		xdg-desktop-portal-hyprland
+    xdg-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -125,10 +125,10 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
   # fonts
-	fonts.packages = with pkgs; [ 
-	noto-fonts
-	noto-fonts-cjk-sans
-	noto-fonts-emoji
-	];
+  fonts.packages = with pkgs; [ 
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+  ];
 
 }

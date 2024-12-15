@@ -15,6 +15,9 @@
     ./home-modules/zoxide.nix
   ];
 
+  # Allowing unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "erina";
@@ -35,11 +38,7 @@
     pkgs.floorp
     pkgs.ungoogled-chromium
 
-    (pkgs.nerdfonts.override { fonts = [ 
-      "Noto" 
-      "JetBrainsMono" 
-      "UbuntuMono"
-    ];})
+    pkgs.nerd-fonts.noto
 
     pkgs.notify-desktop
     pkgs.pa-notify
@@ -53,7 +52,6 @@
 
     pkgs.jetbrains.clion
     pkgs.rpcs3
-    pkgs.masterpdfeditor
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
