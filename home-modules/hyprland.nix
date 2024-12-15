@@ -1,5 +1,20 @@
 {...} : {
 
+	services.hyprpaper = {
+		enable = true;
+		settings = {
+			ipc = "on";
+			splash = false;
+
+			preload =
+				["./themes/BocchiPaper.jpg"];
+
+			wallpaper = [
+				", ./themes/BocchiPaper.jpg"
+			];
+		};
+	};
+
 	wayland.windowManager.hyprland = {
 		enable = true;
 
@@ -106,8 +121,8 @@
 				", , exec, playerctl next"
 
 				# Executing programs
-				"$mod, SPACE, exec, tofi-run | fish"
-				"$mod SHIFT, SPACE, exec, tofi-run | nvidia-offload | fish"
+				"$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
+				"$mod SHIFT, SPACE, exec, nvidia-offload | rofi -show combi -modes combi -combi-modes \"window,drun,run\""
 				"$mod, RETURN, exec, kitty"
 			]
 				++ (
@@ -134,5 +149,4 @@
 			};
 		};
 	};
-
 }

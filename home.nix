@@ -6,7 +6,7 @@
     ./home-modules/fish.nix
     ./home-modules/starship.nix
     ./home-modules/kitty.nix
-    ./home-modules/tofi.nix
+    ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
     ./home-modules/waybar.nix
     ./home-modules/mako.nix

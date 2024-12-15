@@ -33,6 +33,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  # TODO: remember change the lang stuff here
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
