@@ -10,26 +10,26 @@
     };
   };
 
-  outputs = {self, nixpkgs, ...} @inputs:
+  outputs = { self, nixpkgs, ... } @inputs:
     let
       system = "x86_64-linux";
 
       pkgs = import nixpkgs {
-	inherit system;
+        inherit system;
 
-	config.allowUnfree = true;
+        config.allowUnfree = true;
       };
 
     in
-      {
+    {
       nixosConfigurations = {
-	default = nixpkgs.lib.nixosSystem {
-	  specialArgs = { inherit inputs system; };
+        default = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs system; };
 
-	  modules = [
-	    ./configuration.nix
-	  ];
-	};
+          modules = [
+            ./configuration.nix
+          ];
+        };
       };
     };
 

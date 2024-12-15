@@ -60,8 +60,7 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {
-  };
+  home.file = { };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -86,14 +85,14 @@
 
   # Default apps
   xdg.mimeApps.defaultApplications = {
-    "text/plain" = ["nvim"];
-    "applicaiton/pdf" = ["zathura.desktop"];
-    "image/*" = ["sxiv.desktop"];
-    "video/png" = ["mpv.desktop"];
-    "video/jpg" = ["mpv.desktop"];
-    "video/*" = ["mpv.desktop"];
-    "web-browser" = ["floorp"];
-    "inode/directory" = ["dolphin"];
+    "text/plain" = [ "nvim" ];
+    "applicaiton/pdf" = [ "zathura.desktop" ];
+    "image/*" = [ "sxiv.desktop" ];
+    "video/png" = [ "mpv.desktop" ];
+    "video/jpg" = [ "mpv.desktop" ];
+    "video/*" = [ "mpv.desktop" ];
+    "web-browser" = [ "floorp" ];
+    "inode/directory" = [ "dolphin" ];
   };
 
   # Let Home Manager install and manage itself.
