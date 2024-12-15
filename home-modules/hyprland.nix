@@ -1,20 +1,4 @@
 {...} : {
-
-	services.hyprpaper = {
-		enable = true;
-		settings = {
-			ipc = "on";
-			splash = false;
-
-			preload =
-				["./themes/BocchiPaper.jpg"];
-
-			wallpaper = [
-				", ./themes/BocchiPaper.jpg"
-			];
-		};
-	};
-
 	wayland.windowManager.hyprland = {
 		enable = true;
 
@@ -32,18 +16,18 @@
 
 			env = XCURSOR_SIZE, 30
 
-			exec-once = waybar
-
-			exec-once = pa-notify
-
 			exec-once = fctix5
-
-			exec-once = hyprpaper
 		'';
 
 
 		settings = {
 			"$mod" = "SUPER";
+
+			exec-once = [
+				"waybar"
+				"hyprpaper"
+				"pa-notify"
+			];
 
 			general = {
 				border_size = 2;

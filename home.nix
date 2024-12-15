@@ -8,6 +8,7 @@
     ./home-modules/kitty.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
+    ./home-modules/hyprpaper.nix
     ./home-modules/waybar.nix
     ./home-modules/mako.nix
     ./home-modules/nvim.nix
