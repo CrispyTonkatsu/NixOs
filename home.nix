@@ -58,7 +58,7 @@
 		pkgs.pa-notify
 		pkgs.hyprshot
 
-		pkgs.dolphin
+		pkgs.xfce.thunar
 		pkgs.fcitx5-mozc
 		pkgs.vial
 		pkgs.via
@@ -149,10 +149,10 @@
 				splash = false;
 
 				preload =
-					["/home/erina/Downloads/wallpapers/RanmaPaper2.jpg" ];
+					["/home/erina/Downloads/wallpapers/SakuraPaper.jpg" ];
 
 				wallpaper = [
-					", /home/erina/Downloads/wallpapers/RanmaPaper2.jpg"
+					", /home/erina/Downloads/wallpapers/SakuraPaper.jpg"
 				];
 			};
 	};
