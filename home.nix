@@ -53,6 +53,8 @@
 
     pkgs.jetbrains.clion
     pkgs.rpcs3
+
+    pkgs.xfce.thunar
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

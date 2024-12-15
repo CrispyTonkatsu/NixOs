@@ -2,15 +2,11 @@
 	services.hyprpaper = {
 		enable = true;
 		settings = {
-			ipc = "on";
-			splash = false;
-
 			preload =
-				["./themes/BocchiPaper.jpg"];
+				["~/.nixos/home-modules/themes/Monogatari.png"];
 
-			wallpaper = [
-				",./themes/BocchiPaper.jpg"
-			];
+			wallpaper = 
+				[",~/.nixos/home-modules/themes/Monogatari.png"];
 		};
 	};
 }
