@@ -1,21 +1,22 @@
-{ pkgs, ... }: {
+{ ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
 
     extraConfig = ''
-      monitor = eDP-1, preferred, auto, 2
-      monitor = HDMI-A-3, preferred, auto-left, 1
-      monitor = DP-4, preferred, auto, 2
-      monitor = DP-5, preferred, auto, 2
-      monitor = DP-6, preferred, auto, 2
-
       env = HYPRCUROR_SIZE, 60
-
       env = XCURSOR_SIZE, 30
     '';
 
     settings = {
       "$mod" = "SUPER";
+
+      monitor = [
+        "eDP-1, preferred, auto, 2"
+        "HDMI-A-3, preferred, auto-left, 1"
+        "DP-4, preferred, auto, 2"
+        "DP-5, preferred, auto, 2"
+        "DP-6, preferred, auto, 2"
+      ];
 
       exec-once = [
         "waybar"
