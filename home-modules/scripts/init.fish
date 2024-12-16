@@ -1,5 +1,5 @@
 starship init fish | source
-set fish_greeting (date)
+set fish_greeting (echo ./ascii-art/shinobu.txt)
 
 fish_default_key_bindings
 

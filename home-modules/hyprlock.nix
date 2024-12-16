@@ -1,5 +1,4 @@
 { ... }: {
-  # TODO: learn how to set this up so that this is what we boot to
   programs.hyprlock = {
     enable = true;
     settings = {
