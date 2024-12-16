@@ -10,6 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nix-ld.nix
+      # ./greetd.nix
       ./core-modules/steam.nix
       inputs.home-manager.nixosModules.home-manager
     ];
