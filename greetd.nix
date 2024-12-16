@@ -1,13 +1,19 @@
-{ pkgs, ... }: {
-  # TODO: Left off setting up the greeter
+{ ... }: {
+  # Will not use it because its weird to ensure hyprlock works well here
   services.greetd = {
     enable = true;
-    settings = rec {
-      initial_session = {
+    settings = {
+      environments = [
+        "Hyprland"
+        "fish"
+      ];
+
+      initial_session = { };
+
+      default_session = {
         command = "Hyprland";
         user = "erina";
       };
-      default_session = initial_session;
     };
   };
 }
