@@ -3,19 +3,16 @@
     enable = true;
 
     extraConfig = ''
-      			monitor = eDP-1, preferred, auto, 2
-      			monitor = HDMI-A-3, preferred, auto-left, 1
-      			monitor = DP-4, preferred, auto, 2
-      			monitor = DP-5, preferred, auto, 2
-      			monitor = DP-6, preferred, auto, 2
+      monitor = eDP-1, preferred, auto, 2
+      monitor = HDMI-A-3, preferred, auto-left, 1
+      monitor = DP-4, preferred, auto, 2
+      monitor = DP-5, preferred, auto, 2
+      monitor = DP-6, preferred, auto, 2
 
-      			input:touchpad:natural_scroll = true
+      env = HYPRCUROR_SIZE, 60
 
-      			env = HYPRCUROR_SIZE, 60
-      			env = HYPRCURSOR_THEME, rose-pine-hyprcursor
-
-      			env = XCURSOR_SIZE, 30
-      		'';
+      env = XCURSOR_SIZE, 30
+    '';
 
     settings = {
       "$mod" = "SUPER";
@@ -41,9 +38,14 @@
           ",intl"
         ];
         kb_options = [
-          "grp:alt_space_toggle"
+          # "grp:alt_space_toggle"
           "caps:escape"
         ];
+
+        touchpad = {
+          natural_scroll = true;
+          scroll_factor = 0.2;
+        };
       };
 
       decoration = {
@@ -87,10 +89,10 @@
         "$mod CTRL, K, workspace, r-1"
 
         # Window movement
-        "$modSHIFT, H, movewindow ,l"
-        "$modSHIFT, L, movewindow ,r"
-        "$modSHIFT, J, movewindow ,d"
-        "$modSHIFT, K, movewindow ,u"
+        "$mod SHIFT, H, movewindow ,l"
+        "$mod SHIFT, L, movewindow ,r"
+        "$mod SHIFT, J, movewindow ,d"
+        "$mod SHIFT, K, movewindow ,u"
         "$mod CTRL SHIFT, J, movetoworkspace, r+1"
         "$mod CTRL SHIFT, K, movetoworkspace, r-1"
 
@@ -137,9 +139,5 @@
         use_nearest_neighbor = true;
       };
     };
-
-    plugins = with pkgs;[
-      hyprlandPlugins.hyprtrails
-    ];
   };
 }
