@@ -1,16 +1,16 @@
-{pkgs, ...} : {
-	programs.neovim = {
-		enable = true;
-		defaultEditor = true;
-		vimAlias = true;
-		viAlias = true;
+{ pkgs, ... }: {
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    vimAlias = true;
+    viAlias = true;
 
-		extraPackages = with pkgs; [
-			clang-tools
-			gcc
-			clang
-		];
-	};
+    extraPackages = with pkgs; [
+      clang-tools
+      gcc
+      clang
+    ];
+  };
 
-	home.packages = with pkgs; [neovide wl-clipboard];
+  home.packages = with pkgs; [ neovide wl-clipboard ];
 }

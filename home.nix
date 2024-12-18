@@ -36,26 +36,28 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.floorp
-    pkgs.ungoogled-chromium
+  home.packages = with pkgs;[
+    floorp
+    ungoogled-chromium
 
-    pkgs.nerd-fonts.noto
+    nerd-fonts.noto
 
-    pkgs.notify-desktop
-    pkgs.pa-notify
-    pkgs.hyprshot
+    notify-desktop
+    pa-notify
+    hyprshot
 
-    pkgs.vial
+    vial
 
-    pkgs.vesktop
-    pkgs.mpv
-    pkgs.sxiv
+    vesktop
+    mpv
+    sxiv
 
-    pkgs.jetbrains.clion
-    pkgs.rpcs3
+    jetbrains.clion
+    rpcs3
 
-    pkgs.xfce.thunar
+    xfce.thunar
+
+    obsidian
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
