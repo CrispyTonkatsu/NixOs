@@ -39,6 +39,7 @@
   home.packages = with pkgs;[
     floorp
     ungoogled-chromium
+    youtube-music
 
     nerd-fonts.noto
 

@@ -79,6 +79,7 @@
   environment.systemPackages = with pkgs; [
     nixd
 
+    gparted
     zip
     unzip
 
