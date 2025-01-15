@@ -3,7 +3,8 @@
     enable = true;
     font.name = "NotoSansMono Nerd Font Mono";
     shellIntegration.enableFishIntegration = true;
-    themeFile = "Blazer";
+    # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque
+    themeFile = builtins.readFile ./themes/kitty-citruszest.conf;
     settings = {
       background_opacity = "0.9";
       confirm_os_window_close = 0;
