@@ -5,29 +5,32 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
+
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/cc502557-0af0-4450-9055-d6d445ccb790";
+    {
+      device = "/dev/disk/by-uuid/cc502557-0af0-4450-9055-d6d445ccb790";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FB24-A9D4";
+    {
+      device = "/dev/disk/by-uuid/FB24-A9D4";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/e6c9564c-1808-458a-b1df-7f46dbc38a3e"; }
-    ];
+    [{ device = "/dev/disk/by-uuid/e6c9564c-1808-458a-b1df-7f46dbc38a3e"; }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -45,47 +48,47 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services.blueman.enable = true;
 
-# Nvidia setup
+  # Nvidia setup
   hardware.graphics = {
-	  enable = true;
+    enable = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
-# This setting is required
-  modesetting.enable = true;
+    # This setting is required
+    modesetting.enable = true;
 
-# Nvidia power management. Experimental and can cause sleep/suspend to fail.
-# Enable this if you have graphical corruption issue s or application crashes after waking up
-# from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
-# of just the bare essentials.
-  powerManagement.enable = false;
+    # Nvidia power management. Experimental and can cause sleep/suspend to fail.
+    # Enable this if you have graphical corruption issue s or application crashes after waking up
+    # from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
+    # of just the bare essentials.
+    powerManagement.enable = false;
 
-# Fine-grained power management. Turns off GPU when not in use.
-# Experimental and only works on Nvidia GPUs (Turing or newer).
-  powerManagement.finegrained = false;
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
 
-# Use the Nvidia open source kernel module (not to be confused with the
-# independent third-party "nouveau" open source driver).
-# Support is limited to the Turing and later architectures. Full list of
-# supported GPUs is at the nix wiki
-# Currently in alpha-quality/buggy, so false is currently the recommended setting.
-  open = false;
+    # Use the Nvidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at the nix wiki
+    # Currently in alpha-quality/buggy, so false is currently the recommended setting.
+    open = false;
 
-# Enable the Nvidia settings menu.
-# accessible via 'nvidia-settings'
-  nvidiaSettings = true;
+    # Enable the Nvidia settings menu.
+    # accessible via 'nvidia-settings'
+    nvidiaSettings = true;
 
-# Optionally, you may need to select the appropriate driver version for your specific GPU.
-  package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-##### Pull rq to the nix nvidia page that they should rec using nix-shell for the lshw so the user doesn't need to install it
+    ##### Pull rq to the nix nvidia page that they should rec using nix-shell for the lshw so the user doesn't need to install it
 
     prime = {
       offload = {
-	enable = true;
-	enableOffloadCmd = true;
+        enable = true;
+        enableOffloadCmd = true;
       };
 
       # Ibus details

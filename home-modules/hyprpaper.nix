@@ -1,12 +1,12 @@
-{...} : {
-	services.hyprpaper = {
-		enable = true;
-		settings = {
-			preload =
-				["~/.nixos/home-modules/themes/Monogatari.png"];
+{ ... }: {
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload =
+        [ "~/.nixos/home-modules/themes/tsubasa_cat.png" ];
 
-			wallpaper = 
-				[",~/.nixos/home-modules/themes/Monogatari.png"];
-		};
-	};
+      wallpaper =
+        [ ",~/.nixos/home-modules/themes/tsubasa_cat.png" ];
+    };
+  };
 }
