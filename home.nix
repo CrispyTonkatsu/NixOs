@@ -9,6 +9,7 @@
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
     ./home-modules/hyprpaper.nix
+    ./home-modules/wpaperd.nix
     ./home-modules/hyprlock.nix
     ./home-modules/waybar.nix
     ./home-modules/mako.nix

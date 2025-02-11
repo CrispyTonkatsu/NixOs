@@ -20,7 +20,7 @@
 
       exec-once = [
         "waybar"
-        "hyprpaper"
+        "wpaperd"
         "pa-notify"
         "fctix5"
       ];
