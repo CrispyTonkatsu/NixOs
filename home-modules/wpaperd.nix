@@ -4,8 +4,9 @@
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers/food_paper.jpg;
+        path = ./themes/wallpapers;
         mode = "center";
+        sorting = "random";
       };
     };
   };

@@ -10,7 +10,7 @@
       };
 
       background = {
-        path = "~/.nixos/home-modules/themes/Monogatari.png";
+        path = "~/.nixos/home-modules/themes/wallpapers/food_paper.jpg";
         blur_passes = 3;
         blur_size = 8;
         brightness = 0.5;
