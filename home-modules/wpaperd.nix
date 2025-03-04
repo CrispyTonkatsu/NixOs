@@ -1,12 +1,12 @@
 { ... }: {
 
-  programs.wpaperd = {
+  services.wpaperd = {
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers;
+        path = ./themes/wallpapers/BocchiPaper2.jpg;
         mode = "center";
-        sorting = "random";
+        # sorting = "random";
       };
     };
   };

@@ -14,15 +14,6 @@
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  # boot = {
-  #   kernelModules = [ "kvm-intel" "i2c-dev" "xpad" "hid-nintendo" "xone" "xpadneo" ];
-  #   # extraModulePackages = [
-  #   #   config.boot.kernelPackages.ddcci-driver
-  #   #   config.boot.kernelPackages.xone
-  #   #   config.boot.kernelPackages.xpadneo
-  #   #   (config.boot.kernelPackages.callPackage ./packages/xpad.nix { })
-  #   # ];
-  # };
 
   fileSystems."/" =
     {
@@ -124,8 +115,8 @@
   services.logind.lidSwitchExternalPower = "ignore";
 
   # #udev stuff (for corne)
-  # services.udev.extraRules = ''
-  #   # Your rule goes here
-  #   KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  # '';
+  services.udev.extraRules = ''
+    # Your rule goes here
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  '';
 }

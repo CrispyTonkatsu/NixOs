@@ -13,7 +13,7 @@
       font_size = 14;
       disable_ligatures = "always";
       # cursor_trail = 1;
-      clear_all_shortcuts = true;
+      # clear_all_shortcuts = true;
     };
   };
 }
