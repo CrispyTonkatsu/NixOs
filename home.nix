@@ -6,6 +6,7 @@
     ./home-modules/fish.nix
     ./home-modules/starship.nix
     ./home-modules/kitty.nix
+    ./home-modules/wezterm.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
     ./home-modules/wpaperd.nix
@@ -63,6 +64,8 @@
     gcalcli
 
     bottles
+
+    godot_4
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
