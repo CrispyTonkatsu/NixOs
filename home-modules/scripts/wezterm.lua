@@ -8,6 +8,7 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = "Monokai Pro Ristretto (Gogh)"
+config.window_background_opacity = 0.2
 
 -- and finally, return the configuration to wezterm
 return config

@@ -42,8 +42,6 @@
     ungoogled-chromium
     youtube-music
 
-    nerd-fonts.noto
-
     notify-desktop
     pa-notify
     hyprshot
@@ -55,6 +53,7 @@
     sxiv
 
     jetbrains.clion
+    jetbrains.rider
     rpcs3
 
     xfce.thunar
@@ -66,6 +65,7 @@
     bottles
 
     godot_4
+    krita
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

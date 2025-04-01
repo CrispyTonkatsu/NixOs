@@ -119,4 +119,7 @@
     # Your rule goes here
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
   '';
+
+  # tablet drivers
+  hardware.opentabletdriver.enable = true;
 }

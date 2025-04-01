@@ -9,6 +9,7 @@
 
     settings = {
       "$mod" = "SUPER";
+      "$mod_alt" = "SUPER";
 
       monitor = [
         "eDP-1, preferred, auto, 2"
@@ -39,7 +40,6 @@
           ",intl"
         ];
         kb_options = [
-          # "grp:alt_space_toggle"
           "caps:escape"
         ];
 
@@ -123,8 +123,8 @@
           (i:
             let ws = i + 1;
             in [
-              "$mod, code:1${toString i}, workspace, m~${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, m~${toString ws}"
+              "$mod_alt, code:1${toString i}, workspace, m~${toString ws}"
+              "$mod_alt SHIFT, code:1${toString i}, movetoworkspace, m~${toString ws}"
             ]
           )
           9)

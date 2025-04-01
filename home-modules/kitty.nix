@@ -1,7 +1,7 @@
 { ... }: {
   programs.kitty = {
     enable = true;
-    font.name = "NotoSansMono Nerd Font Mono";
+    font.name = "RobotoMono Nerd Font Mono";
     shellIntegration.enableFishIntegration = true;
     # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque
     themeFile = "Afterglow";

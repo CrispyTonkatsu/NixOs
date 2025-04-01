@@ -42,7 +42,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # TODO: remember change the lang stuff here
+  # TODO: remember to change the lang stuff here
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -149,6 +149,9 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
-  ];
 
+    nerd-fonts.noto
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.roboto-mono
+  ];
 }
