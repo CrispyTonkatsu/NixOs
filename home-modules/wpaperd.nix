@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers/BocchiPaper2.jpg;
+        path = ./themes/wallpapers/landscapes/fukuoka.png;
         mode = "center";
         # sorting = "random";
       };
