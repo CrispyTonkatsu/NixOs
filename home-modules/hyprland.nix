@@ -8,6 +8,11 @@
     '';
 
     settings = {
+      decoration.blur =
+        {
+          enabled = false;
+        };
+
       "$mod" = "SUPER";
       "$mod_alt" = "SUPER";
 
@@ -29,8 +34,8 @@
       general = {
         border_size = 2;
         "col.active_border" = "rgb(944956) rgb(c0c5d4) 45deg";
-        gaps_in = 5;
-        gaps_out = 5;
+        gaps_in = 2;
+        gaps_out = 2;
       };
 
       # TODO: Make this work with many keyboard layouts
@@ -113,7 +118,7 @@
 
         # Executing programs
         "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
-        "$mod SHIFT, SPACE, exec, nvidia-offload | rofi -show combi -modes combi -combi-modes \"window,drun,run\""
+        "$mod SHIFT, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\" | nvidia-offload"
         "$mod, RETURN, exec, kitty"
       ]
       ++ (

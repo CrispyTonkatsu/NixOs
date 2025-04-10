@@ -66,6 +66,10 @@
 
     godot_4
     krita
+
+    #shitposting ah
+    gif-for-cli
+    cppreference-doc
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -90,7 +94,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    NIXOS_OZONE_WL = "0";
+    NIXOS_OZONE_WL = "1";
   };
 
   # Default apps
@@ -103,6 +107,18 @@
     "video/*" = [ "mpv.desktop" ];
     "web-browser" = [ "floorp" ];
     "inode/directory" = [ "dolphin" ];
+  };
+
+  # TODO: Move this to a separate file and add actually useful ones.
+  xdg.desktopEntries = {
+    penguine = {
+      name = "PenguinPosting";
+      comment = "Penguin gets slapped";
+      exec = "gif-for-cli -l=0 https://tenor.com/view/penguin-slap-gif-5263949288532448516";
+      terminal = true;
+      type = "Application";
+      categories = [ "Game" ];
+    };
   };
 
   # Let Home Manager install and manage itself.

@@ -10,4 +10,5 @@
       gamescopeSession.enable = true;
     };
   };
+
 }
