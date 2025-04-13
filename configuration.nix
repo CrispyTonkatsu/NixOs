@@ -112,6 +112,9 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+
+    wineWow64Packages.stagingFull
+    winetricks
   ];
 
   # Options using the pkgs

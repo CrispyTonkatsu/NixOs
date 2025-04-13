@@ -109,7 +109,7 @@
     "inode/directory" = [ "dolphin" ];
   };
 
-  # TODO: Move this to a separate file and add actually useful ones.
+  # TODO: Move this to a separate file and add actually useful ones. (MS teams and what not)
   xdg.desktopEntries = {
     penguine = {
       name = "PenguinPosting";
