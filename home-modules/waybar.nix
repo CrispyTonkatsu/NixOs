@@ -18,15 +18,18 @@
           "clock"
           "tray"
         ];
+
         "hyprland/window" = {
           "max-length" = 50;
         };
+
         "hyprland/language" = {
           format = "{}";
           "format-en" = "US";
           "format-en-intl" = "INTL";
           "format-jp" = "JP";
         };
+
         battery = {
           format = "{capacity}%";
           "format-icons" = [
@@ -37,6 +40,7 @@
             ""
           ];
         };
+
         clock = {
           format = "{:%F %H:%M}";
           "tooltip-format" = "{tz_list}";
@@ -47,6 +51,7 @@
             "Asia/Tokyo"
           ];
         };
+
         network = {
           "format" = "{ifname}";
           "format-wifi" = "";
@@ -54,6 +59,7 @@
           "format-disconnected" = "";
           "max-length" = 50;
         };
+
         tray = {
           "icon-size" = 21;
           spacing = 10;

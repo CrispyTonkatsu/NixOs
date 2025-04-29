@@ -70,6 +70,9 @@
     #shitposting ah
     gif-for-cli
     cppreference-doc
+
+    #rofi extensions
+    rofi-bluetooth
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -111,11 +114,29 @@
 
   # TODO: Move this to a separate file and add actually useful ones. (MS teams and what not)
   xdg.desktopEntries = {
+    zathura = {
+      name = "zathura";
+      comment = "PDF viewer";
+      exec = "zathura";
+      terminal = false;
+      type = "Application";
+      categories = [ "Utility" ];
+    };
+
     penguine = {
       name = "PenguinPosting";
       comment = "Penguin gets slapped";
       exec = "gif-for-cli -l=0 https://tenor.com/view/penguin-slap-gif-5263949288532448516";
       terminal = true;
+      type = "Application";
+      categories = [ "Game" ];
+    };
+
+    steam = {
+      name = "steam";
+      exec = "nvidia-offload steam - forcedesktopscaling 1.75";
+      icon = "steam_icon_2730540";
+      terminal = false;
       type = "Application";
       categories = [ "Game" ];
     };

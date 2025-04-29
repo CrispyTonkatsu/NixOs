@@ -1,5 +1,5 @@
 starship init fish | source
-set fish_greeting (random choice "We are so back!!!" "<3" "<2" "Merry Christmas!!!!" "Jefy Goldy has joined the chat :)" "nya~ <3")
+set fish_greeting (random choice "We are so back!!!" "<3" "<2" "Merry Christmas!!!!" "nya~ <3")
 
 fish_default_key_bindings
 

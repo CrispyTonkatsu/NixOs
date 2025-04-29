@@ -5,6 +5,8 @@
     extraConfig = ''
       env = HYPRCUROR_SIZE, 60
       env = XCURSOR_SIZE, 30
+
+      env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
     '';
 
     settings = {
@@ -86,6 +88,9 @@
         "$mod, C, centerwindow"
         "$mod, C, centerwindow"
 
+        "$mod CTRL, H, resizeactive, -20 0"
+        "$mod CTRL, L, resizeactive, 20 0"
+
         # Focus movement
         "$mod, H, movefocus ,l"
         "$mod, L, movefocus ,r"
@@ -120,6 +125,8 @@
         "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
         "$mod SHIFT, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\" | nvidia-offload"
         "$mod, RETURN, exec, kitty"
+        "$mod SHIFT, B, exec, rofi-bluetooth"
+        "$mod, F6, exec, hyprshot -m window"
       ]
       ++ (
         # workspaces bindings
