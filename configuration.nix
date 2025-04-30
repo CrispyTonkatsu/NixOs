@@ -66,7 +66,7 @@
   users.users.erina = {
     isNormalUser = true;
     description = "erina";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "gamemode" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       neovim

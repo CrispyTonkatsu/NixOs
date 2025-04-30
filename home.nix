@@ -132,9 +132,9 @@
       categories = [ "Game" ];
     };
 
-    steam = {
-      name = "steam";
-      exec = "nvidia-offload steam - forcedesktopscaling 1.75";
+    steam-scaled = {
+      name = "steam-scaled";
+      exec = "steam -forcedesktopscaling 1.75";
       icon = "steam_icon_2730540";
       terminal = false;
       type = "Application";

@@ -5,8 +5,6 @@
     extraConfig = ''
       env = HYPRCUROR_SIZE, 60
       env = XCURSOR_SIZE, 30
-
-      env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
     '';
 
     settings = {
@@ -21,6 +19,7 @@
       monitor = [
         "eDP-1, preferred, auto, 2"
         "HDMI-A-3, preferred, auto-left, 1"
+        "DP-1, preferred, auto-left, 1"
         "DP-4, preferred, auto, 2"
         "DP-5, preferred, auto, 2"
         "DP-6, preferred, auto, 2"
