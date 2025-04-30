@@ -46,6 +46,21 @@
   # CPU Setup
   services.auto-cpufreq = {
     enable = true;
+    settings = {
+      charger = {
+        governor = "performance";
+        energy_performance_preference = "performance";
+        energy_perf_bias = "performance";
+        turbo = "auto";
+      };
+
+      battery = {
+        governor = "powersave";
+        energy_performance_preference = "balance_power";
+        energy_perf_bias = "balance_power";
+        turbo = "never";
+      };
+    };
   };
 
   # Thermal control setup

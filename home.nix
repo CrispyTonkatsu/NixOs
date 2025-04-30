@@ -49,6 +49,7 @@
     vial
 
     discord
+
     mpv
     sxiv
 
