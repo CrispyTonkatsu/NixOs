@@ -43,6 +43,16 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
+  # CPU Setup
+  services.auto-cpufreq = {
+    enable = true;
+  };
+
+  # Thermal control setup
+  services.thermald = {
+    enable = true;
+  };
+
   # Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot

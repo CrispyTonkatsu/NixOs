@@ -48,7 +48,7 @@
 
     vial
 
-    vesktop
+    discord
     mpv
     sxiv
 
