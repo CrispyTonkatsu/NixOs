@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports =
@@ -50,13 +50,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # TODO: remember to change the lang stuff here
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   programs = {
     fish.enable = true;
     nix-ld.enable = true;
@@ -86,6 +79,9 @@
 
   # Bottles requires this
   programs.dconf.enable = true;
+
+  # Display Stuff
+  programs.hyprland.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -128,7 +124,7 @@
   ];
 
   # Options using the pkgs
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = [ " nixpkgs=${inputs.nixpkgs}" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -168,3 +164,5 @@
     nerd-fonts.roboto-mono
   ];
 }
+
+

@@ -9,7 +9,6 @@
     ./home-modules/wezterm.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
-    ./home-modules/plasma.nix
     ./home-modules/wpaperd.nix
     ./home-modules/hyprlock.nix
     ./home-modules/waybar.nix
@@ -62,18 +61,16 @@
 
     obsidian
 
-    gcalcli
-
     bottles
 
     godot_4
     krita
 
-    #shitposting ah
+    # shitposting ah
     gif-for-cli
     cppreference-doc
 
-    #rofi extensions
+    # rofi extensions
     rofi-bluetooth
   ];
 
@@ -137,10 +134,17 @@
     steam-scaled = {
       name = "steam-scaled";
       exec = "steam -forcedesktopscaling 1.75";
-      icon = "steam_icon_2730540";
+      icon = "steam_icon";
       terminal = false;
       type = "Application";
       categories = [ "Game" ];
+    };
+
+    cpp-reference = with pkgs;{
+      name = "C++ reference";
+      exec = "floorp ${cppreference-doc.outPath}/share/cppreference/doc/html/en/Main_Page.html";
+      terminal = false;
+      type = "Application";
     };
   };
 
