@@ -44,29 +44,32 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   # CPU Setup
-  services.auto-cpufreq = {
-    enable = true;
-    settings = {
-      charger = {
-        governor = "performance";
-        energy_performance_preference = "performance";
-        energy_perf_bias = "performance";
-        turbo = "auto";
-      };
+  services.power-profiles-daemon.enable = true;
 
-      battery = {
-        governor = "powersave";
-        energy_performance_preference = "balance_power";
-        energy_perf_bias = "balance_power";
-        turbo = "never";
-      };
-    };
-  };
+  # services.auto-cpufreq = {
+  #   enable = true;
+  #
+  #   settings = {
+  #     charger = {
+  #       governor = "performance";
+  #       energy_performance_preference = "performance";
+  #       energy_perf_bias = "performance";
+  #       turbo = "auto";
+  #     };
+  #
+  #     battery = {
+  #       governor = "powersave";
+  #       energy_performance_preference = "balance_power";
+  #       energy_perf_bias = "balance_power";
+  #       turbo = "never";
+  #     };
+  #   };
+  # };
 
   # Thermal control setup
-  services.thermald = {
-    enable = true;
-  };
+  # services.thermald = {
+  #   enable = true;
+  # };
 
   # Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
