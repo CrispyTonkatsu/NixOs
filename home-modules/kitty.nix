@@ -3,8 +3,9 @@
     enable = true;
     font.name = "RobotoMono Nerd Font Mono";
     shellIntegration.enableFishIntegration = true;
-    # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque
-    themeFile = "rose-pine";
+    shellIntegration.enableNushellIntegration = true;
+    # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque, rose-pine
+    themeFile = "Afterglow";
     settings = {
       background_opacity = "0.9";
       confirm_os_window_close = 0;
