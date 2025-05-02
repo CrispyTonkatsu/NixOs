@@ -1,9 +1,7 @@
 starship init fish | source
 set fish_greeting (random choice "We are so back!!!" "<3" "<2" "Merry Christmas!!!!" "nya~ <3")
 
-fish_default_key_bindings
-
-set -x OBSIDIAN_REST_API_KEY "19a8e650b5cefa8b2001566bebff57af8808ef6b002fcff3e2b516b781b8498e"
+fish_vi_key_bindings
 
 # Little details
 abbr --add :q exit

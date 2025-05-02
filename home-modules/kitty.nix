@@ -1,20 +1,25 @@
 { ... }: {
   programs.kitty = {
     enable = true;
-    font.name = "RobotoMono Nerd Font Mono";
+    font.name = "Hack";
     shellIntegration.enableFishIntegration = true;
-    shellIntegration.enableNushellIntegration = true;
     # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque, rose-pine
-    themeFile = "Afterglow";
+    themeFile = "ayu";
+
     settings = {
       background_opacity = "0.9";
       confirm_os_window_close = 0;
+
       copy_on_select = true;
       clipboard_control = "write-clipboard read-clipboard write-primary";
       font_size = 14;
       disable_ligatures = "always";
-      # cursor_trail = 1;
-      # clear_all_shortcuts = true;
+
+      cursor = "none";
+      cursor_background = "none";
+      cursor_trail = 1;
+      cursor_blink_interval = "0.5 ease-in-out ";
+      cursor_stop_blinking_after = 5.0;
     };
   };
 }

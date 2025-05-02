@@ -10,8 +10,10 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nix-ld.nix
-      # ./greetd.nix
+
+      ./core-modules/fonts.nix
       ./core-modules/steam.nix
+
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -152,17 +154,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
-  # fonts
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-
-    nerd-fonts.noto
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.roboto-mono
-  ];
 }
 
 
