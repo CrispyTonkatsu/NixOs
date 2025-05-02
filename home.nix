@@ -9,6 +9,7 @@
     ./home-modules/wezterm.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
+    ./home-modules/plasma.nix
     ./home-modules/wpaperd.nix
     ./home-modules/hyprlock.nix
     ./home-modules/waybar.nix
