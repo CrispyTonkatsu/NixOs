@@ -1,6 +1,6 @@
-{ lib, stdenvnoCC, fetchgit }:
+{ stdenvnoCC, fetchgit, ... }:
 stdenvnoCC.mkDerivation rec {
-  name = "Sometype-Mono";
+  name = "sometype-mono";
 
   src = fetchgit {
     url = "git@github.com:dharmatype/Sometype-Mono.git";

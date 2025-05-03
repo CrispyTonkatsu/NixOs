@@ -14,7 +14,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
 
-    (import ./../custom-packages/sometype-mono.nix)
+    sometype-mono
   ];
 }
 
