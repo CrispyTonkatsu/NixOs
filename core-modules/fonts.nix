@@ -14,7 +14,9 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
 
-    sometype-mono
+    (pkgs.callPackage
+      ./../custom-packages/sometype-mono.nix)
+    { }
   ];
 }
 

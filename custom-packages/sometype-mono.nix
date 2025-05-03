@@ -1,6 +1,7 @@
 { stdenvnoCC, fetchgit, ... }:
 stdenvnoCC.mkDerivation rec {
   name = "sometype-mono";
+  pname = "sometype-mono";
 
   src = fetchgit {
     url = "git@github.com:dharmatype/Sometype-Mono.git";
