@@ -89,6 +89,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixd
+    nix-prefetch-git
 
     gparted
     zip

@@ -1,17 +1,17 @@
-{ stdenvnoCC, fetchgit, ... }:
-stdenvnoCC.mkDerivation rec {
+{ stdenvNoCC, fetchgit, ... }:
+stdenvNoCC.mkDerivation rec {
   name = "sometype-mono";
   pname = "sometype-mono";
 
   src = fetchgit {
     url = "git@github.com:dharmatype/Sometype-Mono.git";
-    hash = "sha256-f21476e52c6c6e88102e7888602b209db3695cc3";
+    sha256 = "1fh8jnhwykfx6xlr6v8v8vim4cxd7sf4livaaa8wwx1b0ahxdrnb";
   };
 
   installPhase = ''
     runHook preInstall
 
-    install -Dm644 *.ttf -t $out/share/fonts/truetype
+    install -Dm644 ./fonts/ttf/*.ttf -t $out/share/fonts/truetype
 
     runHook postInstall
   '';

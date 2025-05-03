@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  sometype-mono = pkgs.callPackage ./../custom-packages/sometype-mono.nix { };
+in
+{
 
   fonts.fontDir.enable = true;
   fonts.enableDefaultPackages = true;
@@ -14,9 +18,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
 
-    (pkgs.callPackage
-      ./../custom-packages/sometype-mono.nix)
-    { }
+    sometype-mono
   ];
 }
 

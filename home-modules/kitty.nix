@@ -2,6 +2,7 @@
   programs.kitty = {
     enable = true;
     font.name = "Hack";
+
     shellIntegration.enableFishIntegration = true;
     # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque, rose-pine
     themeFile = "ayu";
