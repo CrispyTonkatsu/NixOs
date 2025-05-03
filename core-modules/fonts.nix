@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   sometype-mono = pkgs.callPackage ./../custom-packages/sometype-mono.nix { };
+  doto = pkgs.callPackage ./../custom-packages/doto.nix { };
 in
 {
 
@@ -19,6 +20,7 @@ in
     nerd-fonts.roboto-mono
 
     sometype-mono
+    doto
   ];
 }
 
