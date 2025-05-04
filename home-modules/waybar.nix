@@ -12,7 +12,7 @@
           "hyprland/window"
         ];
         modules-right = [
-          "hyprland/language"
+          # "hyprland/language"
           "network"
           "battery"
           "clock"
@@ -23,15 +23,8 @@
           "max-length" = 50;
         };
 
-        "hyprland/language" = {
-          format = "{}";
-          "format-en" = "US";
-          "format-en-intl" = "INTL";
-          "format-jp" = "JP";
-        };
-
         battery = {
-          format = "{capacity}%";
+          format = "{icon}  {capacity}%";
           "format-icons" = [
             ""
             ""
@@ -43,25 +36,17 @@
 
         clock = {
           format = "{:%F %H:%M}";
-          "tooltip-format" = "{tz_list}";
-          timezones = [
-            ""
-            "America/Vancouver"
-            "Asia/Manila"
-            "Asia/Tokyo"
-          ];
         };
 
         network = {
-          "format" = "{ifname}";
-          "format-wifi" = "";
-          "format-ethernet" = "󰊗";
-          "format-disconnected" = "";
-          "max-length" = 50;
+          format-wifi = "{essid}";
+          format-ethernet = "ethernet";
+          format-disconnected = "no-connection";
+          max-length = 10;
         };
 
         tray = {
-          "icon-size" = 21;
+          icon-size = 21;
           spacing = 10;
         };
       };
