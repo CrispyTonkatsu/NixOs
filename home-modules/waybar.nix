@@ -45,7 +45,7 @@
           format = "{:%F %H:%M}";
           "tooltip-format" = "{tz_list}";
           timezones = [
-            "America/Vancouver"
+            ""
             "America/Vancouver"
             "Asia/Manila"
             "Asia/Tokyo"

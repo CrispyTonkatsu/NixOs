@@ -1,7 +1,7 @@
 * {
-    font-family: 'Doto' 'Noto Sans CJK';
     font-size: 18px;
     min-height: 0px;
+    font-family: 'NotoSansMonoNerdFont', 'Noto Sans CJK';
 }
 
 window#waybar{
@@ -17,7 +17,6 @@ window#waybar{
 
 #window {
     padding: 0 15px;
-    font-weight: bold;
     color: #c0c5d4;
 
     border-width: 2px; 
