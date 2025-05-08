@@ -9,10 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix.url = "github:danth/stylix";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { self, nixpkgs, ... } @inputs:
+  outputs = { self, nixpkgs, stylix, ... } @inputs:
     let
       system = "x86_64-linux";
 
@@ -29,6 +30,7 @@
           specialArgs = { inherit inputs system; };
 
           modules = [
+            stylix.nixosModules.stylix
             ./configuration.nix
           ];
         };

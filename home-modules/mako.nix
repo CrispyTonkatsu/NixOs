@@ -1,14 +1,15 @@
-{...} : {
-	# Notification daemon
-	services.mako = {
-		enable = true;
-		defaultTimeout = 2000;
-		backgroundColor = "#26233a";
-		textColor = "#e0def4";
-		borderColor = "#524f67";
-		progressColor = "#31748f"; # over #
-		# [urgency=high]
-		# border-color=#eb6f92
-	};
+{ ... }: {
+  # Notification daemon
+  services.mako = {
+    enable = true;
+
+    settings = {
+      default-timeout = "2000";
+      background-color = "#26233a";
+      text-color = "#e0def4";
+      border-color = "#524f67";
+      progress-color = "#31748f";
+    };
+  };
 }
 

@@ -5,6 +5,8 @@
     extraConfig = ''
       env = HYPRCUROR_SIZE, 60
       env = XCURSOR_SIZE, 30
+
+      env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
     '';
 
     settings = {

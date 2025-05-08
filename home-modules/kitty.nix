@@ -8,6 +8,8 @@
     themeFile = "ayu";
 
     settings = {
+      linux_display_server = "wayland";
+
       background_opacity = "0.9";
       confirm_os_window_close = 0;
 

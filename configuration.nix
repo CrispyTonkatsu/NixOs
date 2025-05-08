@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, options, ... }:
 
 {
   imports =
@@ -46,8 +46,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  services.automatic-timezoned.enable = true;
+  # TODO: Keep messing around until you find a setup that works automatically and syncs time nicely across windows and linux
+
+  # Setting the time server
+  time.hardwareClockInLocalTime = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
