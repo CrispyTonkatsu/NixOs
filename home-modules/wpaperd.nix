@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers/landscapes/fukuoka.png;
+        path = ./themes/wallpapers/kita.png;
         mode = "center";
         # sorting = "random";
       };
