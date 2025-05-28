@@ -96,6 +96,7 @@
     gparted
     zip
     unzip
+    fzf
 
     btop
     neovim

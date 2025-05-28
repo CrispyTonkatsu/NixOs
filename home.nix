@@ -41,6 +41,7 @@
     floorp
     ungoogled-chromium
     youtube-music
+    pulsemixer
 
     notify-desktop
     pa-notify
@@ -51,7 +52,9 @@
     discord
 
     mpv
-    sxiv
+    qiv
+    hyprpicker
+    wallust
 
     jetbrains.clion
     jetbrains.rider

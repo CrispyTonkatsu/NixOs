@@ -9,6 +9,8 @@
       env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
     '';
 
+    # for nvidia as default env = AQ_DRM_DEVICES, /dev/dri/card0:/dev/dri/card1
+
     settings = {
       decoration.blur =
         {

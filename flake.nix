@@ -9,6 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    evergarden.url = "github:everviolet/nix";
+
+    pywal-nix = { 
+      url = "github:Fuwn/pywal.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix.url = "github:danth/stylix";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
