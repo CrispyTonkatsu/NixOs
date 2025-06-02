@@ -91,6 +91,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixd
+    nixpkgs-fmt
     nix-prefetch-git
 
     gparted

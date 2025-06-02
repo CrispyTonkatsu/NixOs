@@ -11,7 +11,7 @@
 
     evergarden.url = "github:everviolet/nix";
 
-    pywal-nix = { 
+    pywal-nix = {
       url = "github:Fuwn/pywal.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -43,5 +43,4 @@
         };
       };
     };
-
 }

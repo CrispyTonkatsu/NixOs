@@ -4,9 +4,10 @@
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers/kita.png;
+        path = ./themes/wallpapers;
+        sorting = "random";
+        duration = "1h";
         mode = "center";
-        # sorting = "random";
       };
     };
   };
