@@ -3,7 +3,7 @@
     enable = true;
 
     extraConfig = ''
-      env = HYPRCUROR_SIZE, 60
+      env = HYPRCUROR_SIZE, 30
       env = XCURSOR_SIZE, 30
 
       env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
@@ -126,7 +126,6 @@
 
         # Executing programs
         "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
-        "$mod SHIFT, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\" | nvidia-offload"
         "$mod, RETURN, exec, kitty"
         "$mod SHIFT, B, exec, rofi-bluetooth"
         "$mod, F6, exec, hyprshot -m window"

@@ -75,6 +75,12 @@
 
     # rofi extensions
     rofi-bluetooth
+
+    deskreen
+
+    freecad-wayland
+    blender
+    bambu-studio
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

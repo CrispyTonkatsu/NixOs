@@ -13,6 +13,7 @@
 
       ./core-modules/fonts.nix
       ./core-modules/steam.nix
+      ./core-modules/flatpak.nix
 
       inputs.home-manager.nixosModules.home-manager
     ];
@@ -22,6 +23,8 @@
     experimental-features = nix-command flakes
   '';
 
+  # Flatpak for unstable apps
+  services.flatpak.enable = true;
 
   # nix-gaming
   nix.settings = {
@@ -50,6 +53,7 @@
 
   # Setting the time server
   time.hardwareClockInLocalTime = true;
+  services.automatic-timezoned.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
@@ -148,7 +152,9 @@
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedUDPPorts = [
+    3131
+  ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
