@@ -76,8 +76,6 @@
     # rofi extensions
     rofi-bluetooth
 
-    deskreen
-
     freecad-wayland
     blender
     orca-slicer
