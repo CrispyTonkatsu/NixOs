@@ -3,8 +3,8 @@
     enable = true;
 
     extraConfig = ''
-      env = HYPRCUROR_SIZE, 30
-      env = XCURSOR_SIZE, 30
+      env = HYPRCURSOR_THEME, rose-pine-hyprcursor
+      env = HYPRCURSOR_SIZE, 30
 
       env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
     '';
@@ -128,7 +128,7 @@
         "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
         "$mod, RETURN, exec, kitty"
         "$mod SHIFT, B, exec, rofi-bluetooth"
-        "$mod, F6, exec, hyprshot -m window"
+        "$mod, F6, exec, hyprshot -m window -o ~/images/screenshots/"
       ]
       ++ (
         # workspaces bindings

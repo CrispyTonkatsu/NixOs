@@ -38,8 +38,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs;[
-    floorp
+    firefox
     ungoogled-chromium
+
     youtube-music
     pulsemixer
 
@@ -79,6 +80,10 @@
     freecad-wayland
     blender
     orca-slicer
+
+    # mouse cursor
+    rose-pine-cursor
+    rose-pine-hyprcursor
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -114,7 +119,7 @@
     "video/png" = [ "mpv.desktop" ];
     "video/jpg" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
-    "web-browser" = [ "floorp" ];
+    "web-browser" = [ "firefox" ];
     "inode/directory" = [ "dolphin" ];
   };
 
@@ -149,7 +154,7 @@
 
     cpp-reference = with pkgs;{
       name = "C++ reference";
-      exec = "floorp ${cppreference-doc.outPath}/share/cppreference/doc/html/en/Main_Page.html";
+      exec = "firefox ${cppreference-doc.outPath}/share/cppreference/doc/html/en/Main_Page.html";
       terminal = false;
       type = "Application";
     };
