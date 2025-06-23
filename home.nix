@@ -80,7 +80,7 @@
 
     freecad-wayland
     blender
-    bambu-studio
+    orca-slicer
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

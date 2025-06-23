@@ -13,7 +13,6 @@
 
       ./core-modules/fonts.nix
       ./core-modules/steam.nix
-      ./core-modules/flatpak.nix
 
       inputs.home-manager.nixosModules.home-manager
     ];
@@ -22,9 +21,6 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-
-  # Flatpak for unstable apps
-  services.flatpak.enable = true;
 
   # nix-gaming
   nix.settings = {
@@ -157,6 +153,15 @@
   ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Printing Service
+  services.printing.enable = true;
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
