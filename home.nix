@@ -72,7 +72,6 @@
 
     # shitposting ah
     gif-for-cli
-    cppreference-doc
 
     # rofi extensions
     rofi-bluetooth
@@ -123,41 +122,8 @@
     "inode/directory" = [ "dolphin" ];
   };
 
-  # TODO: Move this to a separate file and add actually useful ones. (MS teams and what not)
   xdg.desktopEntries = {
-    zathura = {
-      name = "zathura";
-      comment = "PDF viewer";
-      exec = "zathura";
-      terminal = false;
-      type = "Application";
-      categories = [ "Utility" ];
-    };
-
-    penguine = {
-      name = "PenguinPosting";
-      comment = "Penguin gets slapped";
-      exec = "gif-for-cli -l=0 https://tenor.com/view/penguin-slap-gif-5263949288532448516";
-      terminal = true;
-      type = "Application";
-      categories = [ "Game" ];
-    };
-
-    steam-scaled = {
-      name = "steam-scaled";
-      exec = "steam -forcedesktopscaling 1.75";
-      icon = "steam_icon";
-      terminal = false;
-      type = "Application";
-      categories = [ "Game" ];
-    };
-
-    cpp-reference = with pkgs;{
-      name = "C++ reference";
-      exec = "firefox ${cppreference-doc.outPath}/share/cppreference/doc/html/en/Main_Page.html";
-      terminal = false;
-      type = "Application";
-    };
+    # TODO: Move this to a separate file and add some useful shortcuts
   };
 
   # Let Home Manager install and manage itself.

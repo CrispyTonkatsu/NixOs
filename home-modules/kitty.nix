@@ -15,7 +15,7 @@
 
       copy_on_select = true;
       clipboard_control = "write-clipboard read-clipboard write-primary";
-      font_size = 14;
+      font_size = 16;
       disable_ligatures = "always";
 
       cursor = "none";

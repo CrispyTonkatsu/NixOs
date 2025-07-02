@@ -9,8 +9,6 @@
       env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
     '';
 
-    # for nvidia as default env = AQ_DRM_DEVICES, /dev/dri/card0:/dev/dri/card1
-
     settings = {
       decoration.blur =
         {
@@ -21,7 +19,7 @@
       "$mod_alt" = "SUPER";
 
       monitor = [
-        "eDP-1, preferred, auto, 2"
+        "eDP-1, preferred, auto, 1.666667"
         "HDMI-A-3, preferred, auto-left, 1"
         "DP-1, preferred, auto-left, 1"
         "DP-4, preferred, auto, 2"
@@ -70,16 +68,19 @@
       };
 
       animation = [
-        "workspaces, 1, 3, default, slidefadevert"
+        "workspaces, 1, 3, default, slidevert"
       ];
 
-      bindl = [
-        "$mod SHIFT, DELETE, exit"
+
+      workspace = [
+        # TODO: Consider adding better named workspaces to have more
+        # specific tasks (something like a quick panel or sth nice like that)
       ];
 
       bind = [
         # Locking the desktop
         "$mod, DELETE, exec, hyprlock"
+        "$mod SHIFT, DELETE, exit"
 
         # Game Mode
         "$mod, F1, exec, ~/.nixos/home-modules/scripts/gamemode.sh"
@@ -88,7 +89,6 @@
         "$mod, Q, killactive"
         "$mod, M, fullscreen"
         "$mod, F, togglefloating"
-        "$mod, C, centerwindow"
         "$mod, C, centerwindow"
 
         "$mod CTRL, H, resizeactive, -20 0"
@@ -103,14 +103,8 @@
         "$mod CTRL, K, workspace, r-1"
 
         # Window movement
-        "$mod SHIFT, H, movewindow ,l"
-        "$mod SHIFT, L, movewindow ,r"
-        "$mod SHIFT, J, movewindow ,d"
-        "$mod SHIFT, K, movewindow ,u"
         "$mod CTRL SHIFT, J, movetoworkspace, r+1"
         "$mod CTRL SHIFT, K, movetoworkspace, r-1"
-
-        "$mod, TAB, swapactiveworkspaces, eDP-1 DP-5"
 
         # Monitor management
         ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
@@ -125,7 +119,7 @@
         ", XF86AudioPlay, exec, playerctl play-pause"
 
         # Executing programs
-        "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun,run\""
+        "$mod, SPACE, exec, rofi -show combi -modes combi -combi-modes \"window,drun\""
         "$mod, RETURN, exec, kitty"
         "$mod SHIFT, B, exec, rofi-bluetooth"
         "$mod, F6, exec, hyprshot -m window -o ~/images/screenshots/"
