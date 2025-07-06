@@ -1,25 +1,24 @@
 * {
     font-size: 18px;
     min-height: 0px;
-    font-family: 'NotoSansMonoNerdFont', 'Noto Sans CJK';
+    font-family: 'Noto Sans CJK';
 }
 
 window#waybar{
-    background: rgba(70,36,44, 0.8);
+    background-color: rgba(249, 235, 224, 0.9);
     border: 0px solid rgba(0, 0, 0, 0.0);
-    color: #fbe4dc;
 }
 
-#network, #clock, #battery #language{
+#network, #clock, #battery, #language{
     padding: 0 15px;
-    color: #fbe4dc;
+    color: #373737;
 }
 
 #window {
     padding: 0 15px;
-    color: #c0c5d4;
+    color: #373737;
 
     border-width: 2px; 
-    border-color: #c0c5d4;
+    border-color: #373737;
     border-bottom-style: solid;
 }
