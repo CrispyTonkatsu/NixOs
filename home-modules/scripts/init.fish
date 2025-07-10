@@ -10,11 +10,8 @@ abbr --add :po poweroff
 # Nixos Commands
 abbr --add nsp nix-shell --run fish -p
 abbr --add dev nix develop -c fish
-
-function rebuild -d "rebuilds nixos configuration and clears old entries"
-	sudo sudo nix-collect-garbage --delete-older-than 14d
-	sudo nixos-rebuild switch --flake ~/.nixos/#default
-end
+abbr --add rebuild sudo nixos-rebuild switch --flake ~/.nixos/#default
+abbr --add store-clean sudo nix-collect-garbage --delete-older-than 14d
 
 # Rust stuff
 abbr --add rb cargo build
