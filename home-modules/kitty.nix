@@ -4,8 +4,7 @@
     font.name = "Hack";
 
     shellIntegration.enableFishIntegration = true;
-    # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque, rose-pine
-    themeFile = "Afterglow";
+    themeFile = "atelier-sulphurpool-dark";
 
     settings = {
       linux_display_server = "wayland";

@@ -6,7 +6,6 @@
     ./home-modules/fish.nix
     ./home-modules/starship.nix
     ./home-modules/kitty.nix
-    ./home-modules/wezterm.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
     ./home-modules/wpaperd.nix
