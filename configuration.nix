@@ -9,6 +9,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./core-modules/more-hardware.nix
       ./nix-ld.nix
 
       ./core-modules/fonts.nix
