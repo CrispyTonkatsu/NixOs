@@ -16,7 +16,6 @@
     ./home-modules/nvim.nix
     ./home-modules/zathura.nix
     ./home-modules/zoxide.nix
-    ./home-modules/desktop-files.nix
   ];
 
   # Allowing unfree packages
