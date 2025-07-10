@@ -73,7 +73,7 @@
     # Support is limited to the Turing and later architectures. Full list of
     # supported GPUs is at the nix wiki
     # Currently in alpha-quality/buggy, so false is currently the recommended setting.
-    open = true;
+    open = false;
 
     # Enable the Nvidia settings menu.
     # accessible via 'nvidia-settings'
