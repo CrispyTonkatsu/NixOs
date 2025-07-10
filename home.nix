@@ -16,6 +16,7 @@
     ./home-modules/nvim.nix
     ./home-modules/zathura.nix
     ./home-modules/zoxide.nix
+    ./home-modules/desktop-files.nix
   ];
 
   # Allowing unfree packages
@@ -122,10 +123,6 @@
     "video/*" = [ "mpv.desktop" ];
     "web-browser" = [ "firefox" ];
     "inode/directory" = [ "dolphin" ];
-  };
-
-  xdg.desktopEntries = {
-    # TODO: Move this to a separate file and add some useful shortcuts
   };
 
   # Let Home Manager install and manage itself.
