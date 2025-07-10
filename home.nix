@@ -59,6 +59,8 @@
 
     jetbrains.clion
     jetbrains.rider
+
+    pcsx2
     rpcs3
 
     xfce.thunar
@@ -67,7 +69,7 @@
 
     bottles
 
-    godot_4
+    godot-mono
     krita
 
     # shitposting ah

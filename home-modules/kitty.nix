@@ -5,7 +5,7 @@
 
     shellIntegration.enableFishIntegration = true;
     # Themes I like: Afterglow, ayu, ayu mirage, Blazer, Everforest, Japanesque, rose-pine
-    themeFile = "ayu";
+    themeFile = "Afterglow";
 
     settings = {
       linux_display_server = "wayland";
