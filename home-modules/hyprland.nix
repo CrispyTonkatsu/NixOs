@@ -19,7 +19,7 @@
       "$mod_alt" = "SUPER";
 
       monitor = [
-        "eDP-1, preferred, auto, 1.666667"
+        "eDP-1, preferred, auto, 2"
         "HDMI-A-3, preferred, auto-left, 1"
         "DP-1, preferred, auto-left, 1"
         "DP-4, preferred, auto, 2"

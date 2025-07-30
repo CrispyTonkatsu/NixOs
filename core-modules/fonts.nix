@@ -1,8 +1,4 @@
 { pkgs, ... }:
-let
-  sometype-mono = pkgs.callPackage ./../custom-packages/sometype-mono.nix { };
-  doto = pkgs.callPackage ./../custom-packages/doto.nix { };
-in
 {
 
   fonts.fontDir.enable = true;
@@ -18,9 +14,6 @@ in
     nerd-fonts.noto
     nerd-fonts.jetbrains-mono
     nerd-fonts.roboto-mono
-
-    sometype-mono
-    doto
   ];
 }
 

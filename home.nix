@@ -64,8 +64,6 @@
     pcsx2
     rpcs3
 
-    xfce.thunar
-
     obsidian
 
     bottles
@@ -73,15 +71,12 @@
     godot-mono
     krita
 
-    # shitposting ah
-    gif-for-cli
-
     # rofi extensions
     rofi-bluetooth
 
     freecad-wayland
     blender
-    orca-slicer
+    # orca-slicer
 
     # mouse cursor
     rose-pine-cursor

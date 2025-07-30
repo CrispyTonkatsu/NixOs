@@ -9,10 +9,28 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+
+  # Grub setup
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+
+      theme = pkgs.sleek-grub-theme.override {
+        withStyle = "orange";
+        withBanner = "Think about it";
+      };
+    };
+  };
 
   fileSystems."/" =
     {

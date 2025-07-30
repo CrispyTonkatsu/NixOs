@@ -10,9 +10,10 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # The other hardware stuffs
       ./core-modules/more-hardware.nix
-      ./nix-ld.nix
 
+      ./nix-ld.nix
       ./core-modules/fonts.nix
       ./core-modules/steam.nix
 
@@ -36,9 +37,9 @@
 
   system.autoUpgrade.enable = true;
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # NOTE: Bootloader that got placed into more-hardware.nix
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -68,7 +69,7 @@
   users.users.erina = {
     isNormalUser = true;
     description = "erina";
-    extraGroups = [ "networkmanager" "wheel" "audio" "gamemode" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
     packages = with pkgs; [
       neovim
