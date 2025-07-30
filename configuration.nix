@@ -5,6 +5,7 @@
 { inputs, pkgs, options, ... }:
 
 {
+
   imports =
     [
       # Include the results of the hardware scan.
@@ -22,6 +23,9 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  # nixos store optimization
+  nix.optimise.automatic = true;
 
   # nix-gaming
   nix.settings = {
@@ -94,11 +98,14 @@
     nixd
     nixpkgs-fmt
     nix-prefetch-git
+    nix-search-cli
 
-    gparted
     zip
     unzip
+    p7zip
+
     fzf
+    gparted
 
     btop
     neovim

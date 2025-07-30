@@ -54,12 +54,23 @@
   };
 
   # Power Control
-  services.tlp.enable = true;
+  # old option usedservices.tlp.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
+
   services.thermald.enable = true;
 
   # Audio Setup
   services.pulseaudio.enable = false; # Use Pipewire, the modern sound subsystem
-
   security.rtkit.enable = true; # Enable RealtimeKit for audio purposes
 
   services.pipewire = {
