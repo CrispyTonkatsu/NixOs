@@ -5,7 +5,6 @@
 { inputs, pkgs, options, ... }:
 
 {
-
   imports =
     [
       # Include the results of the hardware scan.
@@ -34,6 +33,9 @@
     trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-1.1.05"
+  ];
 
   system.autoUpgrade.enable = true;
 
@@ -106,7 +108,6 @@
     p7zip
 
     fzf
-    gparted
 
     btop
     neovim
@@ -137,6 +138,12 @@
     winetricks
 
     inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
+
+    # OS setup stuff
+    gparted
+    parted
+    ventoy
+    popsicle
   ];
 
   # Options using the pkgs
