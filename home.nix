@@ -56,7 +56,6 @@
     mpv
     qiv
     hyprpicker
-    wallust
 
     jetbrains.clion
     jetbrains.rider
@@ -70,6 +69,7 @@
 
     godot-mono
     krita
+    gimp3
 
     # rofi extensions
     rofi-bluetooth
@@ -78,7 +78,8 @@
     blender
     # orca-slicer
 
-    # mouse cursor
+    # theming
+    wpaperd
     rose-pine-cursor
     rose-pine-hyprcursor
   ];

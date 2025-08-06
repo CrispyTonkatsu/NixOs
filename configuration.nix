@@ -15,6 +15,8 @@
       ./nix-ld.nix
       ./core-modules/fonts.nix
       ./core-modules/steam.nix
+      ./core-modules/kde.nix
+      ./core-modules/typing_langs.nix
 
       inputs.home-manager.nixosModules.home-manager
     ];
@@ -54,7 +56,6 @@
   networking.networkmanager.enable = true;
 
   # TODO: Keep messing around until you find a setup that works automatically and syncs time nicely across windows and linux
-
   # Setting the time server
   time.hardwareClockInLocalTime = true;
   services.automatic-timezoned.enable = true;
@@ -70,7 +71,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.erina = {
     isNormalUser = true;
-    description = "erina";
+    description = "the main user to use";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
     packages = with pkgs; [
@@ -136,6 +137,7 @@
 
     wineWow64Packages.stagingFull
     winetricks
+    faudio
 
     inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
 

@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, pkgs, ... }: {
 
   services.wpaperd = {
     enable = true;
@@ -12,4 +12,7 @@
       };
     };
   };
+
+  # Disabling the auto start so that it only enables with hyprland
+  systemd.user.services.wpaperd.Install.WantedBy = lib.mkForce [ ];
 }

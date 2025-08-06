@@ -7,7 +7,6 @@
   # Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  services.blueman.enable = true;
 
   # Nvidia setup
   hardware.graphics = {
@@ -59,23 +58,9 @@
   };
 
   # Power Control
-  # old option usedservices.tlp.enable = true;
-  services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-    battery = {
-      governor = "powersave";
-      turbo = "never";
-    };
-    charger = {
-      governor = "performance";
-      turbo = "auto";
-    };
-  };
-
   services.thermald.enable = true;
 
   # Audio Setup
-  services.pulseaudio.enable = false; # Use Pipewire, the modern sound subsystem
   security.rtkit.enable = true; # Enable RealtimeKit for audio purposes
 
   services.pipewire = {
@@ -85,11 +70,13 @@
     pulse.enable = true;
     jack.enable = true;
 
-    lowLatency = {
-      enable = true;
-
-      quantum = 1024;
-      rate = 48000;
+    extraConfig.pipewire."92-low-latency" = {
+      "context.properties" = {
+        "default.clock.rate" = 48000;
+        "default.clock.quantum" = 512;
+        "default.clock.min-quantum" = 512;
+        "default.clock.max-quantum" = 512;
+      };
     };
   };
 

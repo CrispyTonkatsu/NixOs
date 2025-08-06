@@ -7,6 +7,9 @@
       env = HYPRCURSOR_SIZE, 30
 
       env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
+
+      env = GDK_SCALE, 2
+      env = XCURSOR_SIZE, 2
     '';
 
     settings = {
@@ -19,7 +22,7 @@
       "$mod_alt" = "SUPER";
 
       monitor = [
-        "eDP-1, preferred, auto, 2"
+        "eDP-1, preferred, auto, 1.66666666"
         "HDMI-A-3, preferred, auto-left, 1"
         "DP-1, preferred, auto-left, 1"
         "DP-4, preferred, auto, 2"
@@ -29,9 +32,8 @@
 
       exec-once = [
         "waybar"
-        "wpaperd"
         "pa-notify"
-        "fctix5"
+        "wpaperd"
       ];
 
       general = {
@@ -41,15 +43,13 @@
         gaps_out = 2;
       };
 
-      # TODO: Make this work with many keyboard layouts
+      # TODO: Make this work with spanish(got the intl variant workign) and japanese (missing everything basically)
       input = {
-        kb_layout = [ "us" "us" ];
-        kb_variant = [
-          ",intl"
-        ];
-        kb_options = [
-          "caps:escape"
-        ];
+        kb_layout = "us,us";
+
+        kb_variant = ",intl";
+
+        kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
 
         touchpad = {
           natural_scroll = true;
@@ -79,8 +79,7 @@
 
       bind = [
         # Locking the desktop
-        "$mod, DELETE, exec, hyprlock"
-        "$mod SHIFT, DELETE, exit"
+        "$mod, DELETE, exit"
 
         # Game Mode
         "$mod, F1, exec, ~/.nixos/home-modules/scripts/gamemode.sh"
@@ -103,6 +102,11 @@
         "$mod CTRL, K, workspace, r-1"
 
         # Window movement
+        "$mod SHIFT, L, movewindow, r"
+        "$mod SHIFT, H, movewindow, l"
+        "$mod SHIFT, J, movewindow, d"
+        "$mod SHIFT, K, movewindow, u"
+
         "$mod CTRL SHIFT, J, movetoworkspace, r+1"
         "$mod CTRL SHIFT, K, movetoworkspace, r-1"
 
@@ -145,7 +149,6 @@
 
       xwayland = {
         force_zero_scaling = true;
-        use_nearest_neighbor = true;
       };
     };
   };

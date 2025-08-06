@@ -12,12 +12,16 @@
           "hyprland/window"
         ];
         modules-right = [
-          # "hyprland/language"
+          "hyprland/language"
           "network"
           "battery"
           "clock"
           "tray"
         ];
+
+        "hyprland/language" = {
+          "format" = "{short} {variant}";
+        };
 
         "hyprland/window" = {
           "max-length" = 50;
