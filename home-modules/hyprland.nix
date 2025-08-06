@@ -43,13 +43,12 @@
         gaps_out = 2;
       };
 
-      # TODO: Make this work with spanish(got the intl variant workign) and japanese (missing everything basically)
       input = {
-        kb_layout = "us,us";
+        # NOTE: This is disabled given Fcitx5 is now handling the languages
 
-        kb_variant = ",intl";
-
-        kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
+        # kb_layout = "us,us";
+        # kb_variant = ",intl";
+        # kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
 
         touchpad = {
           natural_scroll = true;

@@ -1,4 +1,7 @@
 { pkgs, ... }: {
+  # NOTE: This is required to get the app to start on its own
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
+
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
