@@ -29,14 +29,6 @@
   # nixos store optimization
   nix.optimise.automatic = true;
 
-  # nix cli helper
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/erina/.nixos";
-  };
-
   # nix-gaming
   nix.settings = {
     substituters = [ "https://nix-gaming.cachix.org" ];
