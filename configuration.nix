@@ -29,6 +29,14 @@
   # nixos store optimization
   nix.optimise.automatic = true;
 
+  # nix cli helper
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/erina/.nixos";
+  };
+
   # nix-gaming
   nix.settings = {
     substituters = [ "https://nix-gaming.cachix.org" ];
@@ -40,10 +48,6 @@
   ];
 
   system.autoUpgrade.enable = true;
-
-  # NOTE: Bootloader that got placed into more-hardware.nix
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

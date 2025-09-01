@@ -2,7 +2,7 @@
   programs.starship = {
     enable = true;
 
-    settings = builtins.readFile ./scripts/jetpack.toml;
+    settings = { };
 
     enableFishIntegration = true;
     enableNushellIntegration = true;
