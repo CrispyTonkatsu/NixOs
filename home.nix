@@ -4,6 +4,7 @@
   imports = [
     ./home-modules/git.nix
     ./home-modules/fish.nix
+    ./home-modules/nushell.nix
     ./home-modules/starship.nix
     ./home-modules/kitty.nix
     ./home-modules/rofi.nix

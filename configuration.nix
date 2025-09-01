@@ -64,7 +64,6 @@
   i18n.defaultLocale = "en_CA.UTF-8";
 
   programs = {
-    fish.enable = true;
     nix-ld.enable = true;
   };
 
@@ -73,7 +72,7 @@
     isNormalUser = true;
     description = "me when";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     packages = with pkgs; [
       neovim
     ];
