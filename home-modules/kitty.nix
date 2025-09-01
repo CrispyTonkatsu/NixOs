@@ -4,7 +4,7 @@
     font.name = "Hack";
 
     shellIntegration.enableFishIntegration = true;
-    themeFile = "atelier-sulphurpool-dark";
+    themeFile = "tokyo_night_night";
 
     settings = {
       linux_display_server = "wayland";

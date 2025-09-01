@@ -2,6 +2,7 @@
   # NOTE: This is required to get the app to start on its own
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
+  # TODO: Left off here setting up the languages
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;

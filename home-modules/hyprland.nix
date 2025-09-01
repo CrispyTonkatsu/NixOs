@@ -44,11 +44,11 @@
       };
 
       input = {
-        # NOTE: This is disabled given Fcitx5 is now handling the languages
+        # NOTE: This is disabled given Fcitx5 is now handling the languages, we need to find a way to get the caps escape behavior there
 
-        # kb_layout = "us,us";
-        # kb_variant = ",intl";
-        # kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
+        kb_layout = "us,us";
+        kb_variant = ",intl";
+        kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
 
         touchpad = {
           natural_scroll = true;

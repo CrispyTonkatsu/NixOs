@@ -71,7 +71,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.erina = {
     isNormalUser = true;
-    description = "the main user to use";
+    description = "me when";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
     packages = with pkgs; [
@@ -165,10 +165,11 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  networking.firewall.allowedUDPPorts = [
-    3131
-  ];
+  networking.firewall.enable = true;
+  # Using tdp for wayvnc
+  networking.firewall.allowedTCPPorts = [ 5900 ];
+  # Find what this is for (i forgot) (could be the 3d printer)
+  networking.firewall.allowedUDPPorts = [ 3131 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 

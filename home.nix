@@ -74,6 +74,8 @@
     # rofi extensions
     rofi-bluetooth
 
+    wayvnc
+
     freecad-wayland
     blender
     # orca-slicer
