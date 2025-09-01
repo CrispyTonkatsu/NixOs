@@ -1,8 +1,10 @@
 { ... }: {
   programs.starship = {
     enable = true;
-    settings = {
-      add_newline = false;
-    };
+
+    settings = builtins.readFile ./scripts/jetpack.toml;
+
+    enableFishIntegration = true;
+    enableNushellIntegration = true;
   };
 }
