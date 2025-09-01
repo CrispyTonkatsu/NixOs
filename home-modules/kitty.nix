@@ -3,10 +3,10 @@
     enable = true;
     font.name = "Hack";
 
-    shellIntegration.enableFishIntegration = true;
     themeFile = "tokyo_night_night";
 
     settings = {
+      shell = "nu";
       linux_display_server = "wayland";
 
       background_opacity = "0.9";
