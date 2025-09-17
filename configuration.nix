@@ -15,7 +15,7 @@
       ./nix-ld.nix
       ./core-modules/fonts.nix
       ./core-modules/steam.nix
-      ./core-modules/kde.nix
+      # ./core-modules/kde.nix
       ./core-modules/typing_langs.nix
 
       inputs.home-manager.nixosModules.home-manager
