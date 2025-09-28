@@ -24,10 +24,11 @@
       monitor = [
         "eDP-1, preferred, auto, 1.66666666"
         "HDMI-A-3, preferred, auto-left, 1"
-        "DP-1, preferred, auto-left, 1"
+        "DP-1, preferred, auto-left, 2"
         "DP-4, preferred, auto, 2"
         "DP-5, preferred, auto, 2"
         "DP-6, preferred, auto, 2"
+        "DP-7, preferred, auto, 1.66666666"
       ];
 
       exec-once = [
@@ -48,7 +49,7 @@
 
         kb_layout = "us,us";
         kb_variant = ",intl";
-        kb_options = "caps:escape_shifted_capslock, grp:alt_shift_toggle";
+        kb_options = "caps:swapescape, grp:alt_shift_toggle";
 
         touchpad = {
           natural_scroll = true;
@@ -108,6 +109,7 @@
 
         "$mod CTRL SHIFT, J, movetoworkspace, r+1"
         "$mod CTRL SHIFT, K, movetoworkspace, r-1"
+        "ALT, TAB, workspace, previous"
 
         # Monitor management
         ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
