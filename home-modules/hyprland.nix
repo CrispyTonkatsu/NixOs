@@ -22,13 +22,13 @@
       "$mod_alt" = "SUPER";
 
       monitor = [
-        "eDP-1, preferred, auto, 1.66666666"
+        "eDP-1, preferred, auto, 2"
         "HDMI-A-3, preferred, auto-left, 1"
         "DP-1, preferred, auto-left, 2"
         "DP-4, preferred, auto, 2"
         "DP-5, preferred, auto, 2"
         "DP-6, preferred, auto, 2"
-        "DP-7, preferred, auto, 1.66666666"
+        "DP-7, preferred, auto, 2"
       ];
 
       exec-once = [
@@ -59,12 +59,6 @@
 
       decoration = {
         rounding = 3;
-      };
-
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_invert = true;
-        workspace_swipe_create_new = false;
       };
 
       animation = [

@@ -35,10 +35,6 @@
     trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.05"
-  ];
-
   system.autoUpgrade.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -140,7 +136,6 @@
     # OS setup stuff
     gparted
     parted
-    ventoy
     popsicle
   ];
 

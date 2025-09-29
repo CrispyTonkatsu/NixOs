@@ -17,6 +17,7 @@
     ./home-modules/zathura.nix
     ./home-modules/zoxide.nix
 
+    ./home-modules/scripts.nix
     ./home-modules/desktop-files.nix
   ];
 

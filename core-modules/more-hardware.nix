@@ -81,8 +81,8 @@
     };
   };
 
-  # Lid settings
-  services.logind.lidSwitchExternalPower = "ignore";
+  # Lid setting for external power
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
   # #udev stuff (for corne)
   services.udev.extraRules = ''

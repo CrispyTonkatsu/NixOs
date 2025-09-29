@@ -10,3 +10,4 @@ alias spo = poweroff
 
 alias dev = nix develop -c nu
 alias nsp = nix-shell --run nu -p
+
