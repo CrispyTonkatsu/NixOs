@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
-
-import argparse, os
+import argparse, os, subprocess
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -8,7 +7,9 @@ from zipfile import ZipFile
 parser = argparse.ArgumentParser(
     description='automatically setup a volper project')
 
-default_path = str(Path.home()) + str('/digipen/CS330')
+class_name = "CS330"
+
+default_path = str(Path.home()) + str('/digipen') + "/" + class_name
 
 # Adding the arguments the parser should look for
 _ = parser.add_argument('zip_path', type=str, help='The location of the zip with the given files for the project')
@@ -29,8 +30,20 @@ if(not file_name.endswith(".zip") or not os.path.isfile(zip_path)):
 
 folder_path = str(destination) + "/" + file_name.removesuffix(".zip")
 
-# Actually setting up the environment
-os.mkdir(folder_path)
-ZipFile(zip_path).extractall(folder_path)
-
 # Cloning the github template
+repo_name = class_name + "-" + file_name.removesuffix(".zip").removesuffix("-files")
+
+repo_creation_output = subprocess.run(["gh","repo", "create", repo_name, "--private", "-p", "CrispyTonkatsu/volpy-template"])
+
+if(repo_creation_output.returncode != 0):
+    exit()
+
+repo_cloning_output = subprocess.run(["gh", "repo", "clone", repo_name, folder_path])
+
+if(repo_cloning_output.returncode != 0):
+    exit()
+
+repo_pull_output = subprocess.run(["git", "-C", folder_path, "pull"])
+
+# Actually placing the files there
+ZipFile(zip_path).extractall(folder_path)
