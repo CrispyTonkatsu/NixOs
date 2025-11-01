@@ -4,8 +4,8 @@
     enable = true;
     settings = {
       default = {
-        path = ./themes/wallpapers/metaphor;
-        recursive = false;
+        path = ./themes/wallpapers/active/;
+          recursive = false;
         sorting = "random";
         duration = "1h";
         mode = "center";

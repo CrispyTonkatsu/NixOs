@@ -47,3 +47,5 @@ repo_pull_output = subprocess.run(["git", "-C", folder_path, "pull"])
 
 # Actually placing the files there
 ZipFile(zip_path).extractall(folder_path)
+
+# TODO: Add the cmake setup steps

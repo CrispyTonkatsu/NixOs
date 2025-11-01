@@ -111,6 +111,7 @@
     gdb
     clang-tools
     clang
+    perf
 
     cl
     zig
