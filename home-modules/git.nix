@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs = {
     gh-dash = {
       enable = true;
@@ -7,17 +7,22 @@
     gh = {
       enable = true;
       gitCredentialHelper.enable = true;
-      extensions = with pkgs; [gh-dash];
+      extensions = with pkgs; [ gh-dash ];
     };
 
     git = {
       enable = true;
-      userName = "Edgar Jose Donoso Mansilla";
-      userEmail = "edguitar.dm@gmail.com";
 
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Edgar Jose Donoso Mansilla";
+          email = "edguitar.dm@gmail.com";
+        };
+
+        alias = { };
+
         url = {
-          "https://github.com/" = {insteadOf = "gh:";};
+          "https://github.com/" = { insteadOf = "gh:"; };
         };
 
         init.defaultBranch = "main";
@@ -25,11 +30,11 @@
         http.sslVerify = false;
       };
 
-      aliases = {};
+    };
 
-      delta = {
-        enable = true;
-      };
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
   };
 }

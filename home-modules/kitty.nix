@@ -17,7 +17,7 @@
 
       cursor = "none";
       cursor_background = "none";
-      cursor_trail = 1;
+      cursor_trail = 0;
       cursor_blink_interval = "0.5 ease-in-out ";
       cursor_stop_blinking_after = 10.0;
     };
