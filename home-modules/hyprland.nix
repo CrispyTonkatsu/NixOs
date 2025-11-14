@@ -2,17 +2,19 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-    extraConfig = ''
-      env = HYPRCURSOR_THEME, rose-pine-hyprcursor
-      env = HYPRCURSOR_SIZE, 30
-
-      env = AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card0
-
-      env = GDK_SCALE, 2
-      env = XCURSOR_SIZE, 2
-    '';
-
     settings = {
+
+      env = [
+        "HYPRCURSOR_THEME, rose-pine-hyprcursor"
+        "HYPRCURSOR_SIZE, 30"
+
+        # TODO: Make this not hard coded links
+        "AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card2"
+
+        "GDK_SCALE, 2"
+        "XCURSOR_SIZE, 2"
+      ];
+
       decoration.blur =
         {
           enabled = false;

@@ -75,8 +75,8 @@
       "context.properties" = {
         "default.clock.rate" = 48000;
         "default.clock.quantum" = 512;
-        "default.clock.min-quantum" = 512;
-        "default.clock.max-quantum" = 512;
+        "default.clock.min-quantum" = 1024;
+        "default.clock.max-quantum" = 1024;
       };
     };
   };
@@ -84,10 +84,15 @@
   # Lid setting for external power
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
-  # #udev stuff (for corne)
-  services.udev.extraRules = ''
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  '';
+  #udev stuff (for corne and hyprland gpu stuff)
+
+  services.udev = {
+    packages = [ ../home-modules/scripts/gpu_finder.nix ];
+
+    extraRules = ''
+      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+    '';
+  };
 
   # tablet drivers
   hardware.opentabletdriver.enable = true;
