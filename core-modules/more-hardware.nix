@@ -1,7 +1,13 @@
-{ config, inputs, ... }: {
+{
+  config,
+  inputs,
+  ...
+}:
+{
 
   imports = [
     inputs.nix-gaming.nixosModules.pipewireLowLatency
+    ../custom-packages/gpu-udev-symlinks.nix
   ];
 
   # Bluetooth
@@ -84,15 +90,14 @@
   # Lid setting for external power
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
-  #udev stuff (for corne and hyprland gpu stuff)
-
+  # udev stuff (for corne and hyprland gpu stuff)
   services.udev = {
-    packages = [ ../home-modules/scripts/gpu_finder.nix ];
-
     extraRules = ''
       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
     '';
   };
+
+  hardware.gpu.udev.symlinks.enable = true;
 
   # tablet drivers
   hardware.opentabletdriver.enable = true;

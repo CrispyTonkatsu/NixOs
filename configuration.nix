@@ -2,24 +2,27 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, pkgs, ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # The other hardware stuffs
-      ./core-modules/more-hardware.nix
+  inputs,
+  pkgs,
+  ...
+}:
+{
 
-      ./nix-ld.nix
-      ./core-modules/fonts.nix
-      ./core-modules/steam.nix
-      # ./core-modules/kde.nix
-      ./core-modules/typing_langs.nix
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # The other hardware stuffs
+    ./core-modules/more-hardware.nix
 
-      inputs.home-manager.nixosModules.home-manager
-    ];
+    ./nix-ld.nix
+    ./core-modules/fonts.nix
+    ./core-modules/steam.nix
+    # ./core-modules/kde.nix
+    ./core-modules/typing_langs.nix
+
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   # Enabling stuff
   nix.extraOptions = ''
@@ -64,7 +67,11 @@
   users.users.erina = {
     isNormalUser = true;
     description = "me when";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+    ];
     shell = pkgs.nushell;
     packages = with pkgs; [
       neovim
@@ -92,6 +99,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nixd
+    nixfmt
     nixpkgs-fmt
     nix-prefetch-git
     nix-search-cli
@@ -182,5 +190,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 }
-
-

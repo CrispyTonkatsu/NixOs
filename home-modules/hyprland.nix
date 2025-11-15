@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -15,10 +16,9 @@
         "XCURSOR_SIZE, 2"
       ];
 
-      decoration.blur =
-        {
-          enabled = false;
-        };
+      decoration.blur = {
+        enabled = false;
+      };
 
       "$mod" = "SUPER";
       "$mod_alt" = "SUPER";
@@ -66,7 +66,6 @@
       animation = [
         "workspaces, 1, 3, default, slidevert"
       ];
-
 
       workspace = [
         # TODO: Consider adding better named workspaces to have more
@@ -128,15 +127,18 @@
       ++ (
         # workspaces bindings
         # binds $mod + SHIFT to move between workspaces
-        builtins.concatLists (builtins.genList
-          (i:
-            let ws = i + 1;
-            in [
+        builtins.concatLists (
+          builtins.genList (
+            i:
+            let
+              ws = i + 1;
+            in
+            [
               "$mod_alt, code:1${toString i}, workspace, m~${toString ws}"
               "$mod_alt SHIFT, code:1${toString i}, movetoworkspace, m~${toString ws}"
             ]
-          )
-          9)
+          ) 9
+        )
       );
 
       bindm = [
