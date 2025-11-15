@@ -9,7 +9,6 @@
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 30"
 
-        # TODO: Make this not hard coded links
         "AQ_DRM_DEVICES, /dev/dri/intel-gpu:/dev/dri/nvidia-gpu"
 
         "GDK_SCALE, 2"
