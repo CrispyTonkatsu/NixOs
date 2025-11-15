@@ -92,12 +92,18 @@
 
   # udev stuff (for corne and hyprland gpu stuff)
   services.udev = {
+    gpu.symlinks = {
+      enable = true;
+      gpuNames = [
+        "intel"
+        "nvidia"
+      ];
+    };
+
     extraRules = ''
       KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
     '';
   };
-
-  hardware.gpu.udev.symlinks.enable = true;
 
   # tablet drivers
   hardware.opentabletdriver.enable = true;

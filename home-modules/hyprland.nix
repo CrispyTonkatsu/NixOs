@@ -10,7 +10,7 @@
         "HYPRCURSOR_SIZE, 30"
 
         # TODO: Make this not hard coded links
-        "AQ_DRM_DEVICES, /dev/dri/card1:/dev/dri/card2"
+        "AQ_DRM_DEVICES, /dev/dri/intel-gpu:/dev/dri/nvidia-gpu"
 
         "GDK_SCALE, 2"
         "XCURSOR_SIZE, 2"
