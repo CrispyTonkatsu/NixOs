@@ -10,10 +10,10 @@
 {
 
   imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+    # # Include the results of the hardware scan.
+    # ./hardware-configuration.nix
     # The other hardware stuffs
-    ./core-modules/more-hardware.nix
+    # ./core-modules/more-hardware.nix
 
     ./nix-ld.nix
     ./core-modules/fonts.nix

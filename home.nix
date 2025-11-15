@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   imports = [
     ./home-modules/git.nix

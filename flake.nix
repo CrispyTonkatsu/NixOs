@@ -20,7 +20,8 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { nixpkgs, stylix, ... } @inputs:
+  outputs =
+    { nixpkgs, stylix, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -28,21 +29,13 @@
     {
       # TODO: Figure out how to make more configs for this flake that way we can have one w out the nvidia gpu
       nixosConfigurations = {
-        default-integrated = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs system; };
-
-          modules = [
-            stylix.nixosModules.stylix
-            ./configuration.nix
-          ];
-        };
-
         default = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs system; };
 
           modules = [
             stylix.nixosModules.stylix
             ./configuration.nix
+            ./hardware-configuration.nix
           ];
         };
       };
