@@ -1,10 +1,9 @@
 {
-  inputs,
+  lib,
   ...
 }:
 {
   imports = [
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
     ../custom-packages/gpu-udev-symlinks.nix
     ../core-modules/dual-gpu.nix
   ];
@@ -14,11 +13,13 @@
     nvidia-gpu-only.configuration = {
       hardware.nvidia.prime = {
         offload = {
-          enable = false;
-          enableOffloadCmd = false;
+          enable = lib.mkOverride 0 false;
+          enableOffloadCmd = lib.mkOverride 0 false;
         };
 
-        sync = true;
+        sync = {
+          enable = true;
+        };
       };
     };
   };
@@ -44,9 +45,9 @@
     extraConfig.pipewire."92-low-latency" = {
       "context.properties" = {
         "default.clock.rate" = 48000;
-        "default.clock.quantum" = 256;
-        "default.clock.min-quantum" = 256;
-        "default.clock.max-quantum" = 256;
+        "default.clock.quantum" = 1024;
+        "default.clock.min-quantum" = 1024;
+        "default.clock.max-quantum" = 1024;
       };
     };
   };

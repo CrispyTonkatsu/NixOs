@@ -1,4 +1,8 @@
-{ config, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 {
   # Nvidia setup
   hardware.graphics = {
@@ -37,8 +41,8 @@
 
     prime = {
       offload = {
-        enable = true;
-        enableOffloadCmd = true;
+        enable = lib.mkOverride 1 true;
+        enableOffloadCmd = lib.mkOverride 1 true;
       };
 
       # Ibus details

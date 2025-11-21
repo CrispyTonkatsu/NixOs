@@ -62,7 +62,7 @@
     jetbrains.rider
 
     pcsx2
-    rpcs3
+    # rpcs3
 
     obsidian
 

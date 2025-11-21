@@ -142,6 +142,9 @@
 
     inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
 
+    # me when firefox needs this
+    ffmpeg
+
     # OS setup stuff
     gparted
     parted
