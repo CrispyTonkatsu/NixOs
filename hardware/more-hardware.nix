@@ -3,6 +3,10 @@
   ...
 }:
 {
+  imports = [
+    ../custom-packages/gpu-udev-symlinks.nix
+  ];
+
   # Specialisations
   specialisation = {
     nvidia-gpu-only.configuration = {

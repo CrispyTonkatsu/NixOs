@@ -12,6 +12,7 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+
     ./more-hardware.nix
     ./dual-gpu.nix
   ];

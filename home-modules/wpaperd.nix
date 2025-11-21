@@ -1,5 +1,5 @@
-{ ... }: {
-
+{ ... }:
+{
   services.wpaperd = {
     enable = true;
     settings = {
@@ -12,8 +12,4 @@
       };
     };
   };
-
-  # # Disabling the auto start so that it only enables with hyprland
-  # # TODO: Make this enable at a nix level for nicer rebuilds
-  # systemd.user.services.wpaperd.Install.WantedBy = lib.mkForce [ ];
 }

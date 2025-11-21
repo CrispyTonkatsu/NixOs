@@ -5,6 +5,8 @@
   fonts.enableDefaultPackages = true;
 
   fonts.packages = with pkgs; [
+    (callPackage ../custom-packages/doto.nix { })
+
     hack-font
 
     noto-fonts
@@ -16,4 +18,3 @@
     nerd-fonts.roboto-mono
   ];
 }
-

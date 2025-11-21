@@ -1,5 +1,5 @@
 { stdenvNoCC, fetchgit, ... }:
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   name = "sometype-mono";
   pname = "sometype-mono";
 

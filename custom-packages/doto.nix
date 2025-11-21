@@ -1,11 +1,12 @@
 { stdenvNoCC, fetchgit, ... }:
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   name = "doto-font";
   pname = "doto-font";
 
+  # TODO: Fix the font package
   src = fetchgit {
-    url = "git@github.com:oliverlalan/Doto.git";
-    sha256 = "0dgf9xqnn9jc84l2fi1ivm96sp995qmfd5syi3wnlrcczb3i69qh";
+    url = "https://github.com/oliverlalan/Doto.git";
+    sha256 = "sha256-ECcTx/qMZWr5iF6X5iouKV1tUt0xRCcoQUwma3FP7jU=";
   };
 
   installPhase = ''
