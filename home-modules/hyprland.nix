@@ -4,7 +4,6 @@
     enable = true;
 
     settings = {
-
       env = [
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
         "HYPRCURSOR_SIZE, 30"
@@ -16,7 +15,7 @@
       ];
 
       decoration.blur = {
-        enabled = false;
+        enabled = true;
       };
 
       "$mod" = "SUPER";

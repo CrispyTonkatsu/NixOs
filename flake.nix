@@ -8,20 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    evergarden.url = "github:everviolet/nix";
-
-    pywal-nix = {
-      url = "github:Fuwn/pywal.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    stylix.url = "github:danth/stylix";
-    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs =
-    { nixpkgs, stylix, ... }@inputs:
+    { nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -33,9 +23,8 @@
           specialArgs = { inherit inputs system; };
 
           modules = [
-            stylix.nixosModules.stylix
             ./configuration.nix
-            ./hardware-configuration.nix
+            ./hardware/hardware-configuration.nix
           ];
         };
       };

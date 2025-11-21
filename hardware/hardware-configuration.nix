@@ -12,7 +12,8 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    ./core-modules/more-hardware.nix
+    ./more-hardware.nix
+    ./dual-gpu.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

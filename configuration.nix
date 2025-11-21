@@ -10,15 +10,9 @@
 {
 
   imports = [
-    # # Include the results of the hardware scan.
-    # ./hardware-configuration.nix
-    # The other hardware stuffs
-    # ./core-modules/more-hardware.nix
-
     ./nix-ld.nix
     ./core-modules/fonts.nix
     ./core-modules/steam.nix
-    # ./core-modules/kde.nix
     ./core-modules/typing_langs.nix
 
     inputs.home-manager.nixosModules.home-manager
@@ -31,12 +25,6 @@
 
   # nixos store optimization
   nix.optimise.automatic = true;
-
-  # nix-gaming
-  nix.settings = {
-    substituters = [ "https://nix-gaming.cachix.org" ];
-    trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
-  };
 
   system.autoUpgrade.enable = true;
 
@@ -139,8 +127,6 @@
     wineWow64Packages.stagingFull
     winetricks
     faudio
-
-    inputs.nix-gaming.packages.${pkgs.system}.wine-discord-ipc-bridge
 
     # me when firefox needs this
     ffmpeg
