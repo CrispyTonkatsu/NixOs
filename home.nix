@@ -75,6 +75,8 @@
     # rofi extensions
     rofi-bluetooth
 
+    blueberry
+
     wayvnc
 
     freecad-wayland
