@@ -26,9 +26,8 @@
   targets.darwin.linkApps.enable = true;
 
   home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.agave
-    jetbrains-toolbox
+    firefox
+    discord
   ];
 
   programs.nh = {

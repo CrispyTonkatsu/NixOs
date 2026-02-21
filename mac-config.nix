@@ -5,9 +5,11 @@
   ...
 }: {
   imports = [
+    ./core-modules/fonts.nix
   ];
 
   environment.systemPackages = with pkgs; [
+    nixd
     tree-sitter
     lua
     luarocks

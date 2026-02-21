@@ -17,6 +17,10 @@
     experimental-features = nix-command flakes
   '';
 
+  # Font stuff
+  fonts.fontDir.enable = true;
+  fonts.enableDefaultPackages = true;
+
   # nixos store optimization
   nix.optimise.automatic = true;
 

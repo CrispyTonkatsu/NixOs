@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-
-  fonts.fontDir.enable = true;
-  fonts.enableDefaultPackages = true;
-
   fonts.packages = with pkgs; [
     (callPackage ../custom-packages/doto.nix { })
 
