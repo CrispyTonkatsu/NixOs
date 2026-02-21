@@ -87,6 +87,8 @@
     wpaperd
     rose-pine-cursor
     rose-pine-hyprcursor
+
+    ferdium
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
