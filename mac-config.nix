@@ -12,10 +12,10 @@
   environment.systemPackages = with pkgs; [
     ripgrep
     fzf
+    skimpdf
 
     nixd
     nixfmt
-    dbus
 
     tree-sitter
     lua
@@ -27,7 +27,6 @@
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;

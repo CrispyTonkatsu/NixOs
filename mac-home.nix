@@ -28,7 +28,6 @@
 
   home.packages = with pkgs; [
     firefox
-    discord
   ];
 
   programs.nh = {
