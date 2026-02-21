@@ -12,6 +12,7 @@
     ./home-modules/nushell.nix
     ./home-modules/zoxide.nix
     ./home-modules/starship.nix
+    ./home-modules/zathura.nix
 
     inputs.mac-app-util.homeManagerModules.default
   ];

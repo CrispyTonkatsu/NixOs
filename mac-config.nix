@@ -3,13 +3,20 @@
   inputs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./core-modules/fonts.nix
   ];
 
   environment.systemPackages = with pkgs; [
+    ripgrep
+    fzf
+
     nixd
+    nixfmt
+    dbus
+
     tree-sitter
     lua
     luarocks
@@ -20,6 +27,7 @@
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -33,8 +41,6 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # services.dbus.enable = true;
-
   nixpkgs.config = {
     allowUnfree = true;
     allowUnfreePredicate = _: true;
@@ -46,12 +52,12 @@
     shell = pkgs.nushell;
   };
 
-  environment.shells = with pkgs; [nushell];
+  environment.shells = with pkgs; [ nushell ];
 
   system.primaryUser = "erina";
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
 
     useGlobalPkgs = true;
     useUserPackages = true;
