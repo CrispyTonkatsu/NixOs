@@ -1,11 +1,11 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   programs.kitty = {
     enable = true;
     font.name = "Hack";
 
     settings = {
-      shell = "nu";
+      shell = "${pkgs.nushell.outPath}/bin/nu";
       linux_display_server = "wayland";
 
       background_opacity = "0.9";

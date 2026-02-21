@@ -1,7 +1,9 @@
-{ ... }: {
+{ config, ... }: {
   programs.nushell = {
     enable = true;
-    extraConfig = builtins.readFile ./scripts/config.nu;
+
+    configFile.source = config.lib.file.mkOutOfStoreSymlink ./scripts/config.nu;
+    envFile.source = config.lib.file.mkOutOfStoreSymlink ./scripts/env.nu;
   };
 }
 
