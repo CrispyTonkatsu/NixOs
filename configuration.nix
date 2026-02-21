@@ -5,7 +5,6 @@
 }:
 {
   imports = [
-    ./nix-ld.nix
     ./core-modules/fonts.nix
     ./core-modules/steam.nix
     ./core-modules/typing_langs.nix
@@ -46,7 +45,6 @@
     nix-ld.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.erina = {
     isNormalUser = true;
     extraGroups = [
