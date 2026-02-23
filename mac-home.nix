@@ -14,6 +14,7 @@
     ./home-modules/starship.nix
     ./home-modules/zathura.nix
 
+    ./home-modules/skhd.nix
     inputs.mac-app-util.homeManagerModules.default
   ];
 
