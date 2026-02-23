@@ -1,11 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.skhd = {
     enable = true;
 
     config = ''
-      # open terminal, blazingly fast compared to iTerm/Hyper
-      cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+      ctrl - 1 : open -a kitty
+      ctrl - 2 : open -a firefox
+      ctrl - 3 : open -a discord
     '';
   };
 }
