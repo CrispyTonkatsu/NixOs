@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   services.skhd = {
-    enable = true;
+    enable = false;
 
     config = ''
       ctrl - 1 : open -a kitty

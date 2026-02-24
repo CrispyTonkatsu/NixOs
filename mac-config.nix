@@ -14,6 +14,8 @@
     fzf
     skimpdf
 
+    xorg-server
+
     nixd
     nixfmt
 
