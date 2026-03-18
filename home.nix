@@ -58,8 +58,7 @@
     qiv
     hyprpicker
 
-    jetbrains.clion
-    jetbrains.rider
+    jetbrains-toolbox
 
     pcsx2
     # rpcs3
