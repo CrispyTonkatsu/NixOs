@@ -75,7 +75,7 @@
     # rofi extensions
     rofi-bluetooth
 
-    blueberry
+    blueman
 
     wayvnc
 
