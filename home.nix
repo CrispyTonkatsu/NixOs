@@ -43,7 +43,7 @@
     firefox
     ungoogled-chromium
 
-    youtube-music
+    pear-desktop
     pulsemixer
 
     notify-desktop
