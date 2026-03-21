@@ -1,4 +1,5 @@
 { pkgs, lib, ... }:
+
 {
   imports = [
     ./home-modules/git.nix
@@ -58,7 +59,9 @@
     qiv
     hyprpicker
 
-    jetbrains-toolbox
+    jetbrains.clion
+    jetbrains.rider
+    jetbrains.rust-rover
 
     pcsx2
     # rpcs3
