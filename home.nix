@@ -68,8 +68,6 @@
 
     obsidian
 
-    bottles
-
     godot-mono
     krita
     gimp3

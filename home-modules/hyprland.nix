@@ -25,10 +25,12 @@
         "eDP-1, preferred, auto, 2"
         "HDMI-A-3, 1920x1080, auto-left, 1"
         "DP-1, preferred, auto-left, 2"
-        "DP-4, preferred, auto, 2"
-        "DP-5, preferred, auto, 2"
-        "DP-6, preferred, auto, 2"
-        "DP-7, preferred, auto, 2"
+        "DP-2, preferred, auto-left, 2"
+        "DP-3, preferred, auto-left, 2"
+        "DP-4, preferred, auto-left, 2"
+        "DP-5, preferred, auto-left, 2"
+        "DP-6, preferred, auto-left, 2"
+        "DP-7, preferred, auto-left, 2"
       ];
 
       exec-once = [
