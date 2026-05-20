@@ -1,12 +1,8 @@
 { pkgs, ... }:
 {
   services.skhd = {
-    enable = false;
+    enable = true;
 
-    config = ''
-      ctrl - 1 : open -a kitty
-      ctrl - 2 : open -a firefox
-      ctrl - 3 : open -a discord
-    '';
+    config = builtins.readFile ./skhdrc { };
   };
 }

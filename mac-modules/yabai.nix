@@ -4,15 +4,23 @@
     enable = true;
 
     config = {
-      focus_follows_mouse = "autoraise";
-      mouse_follows_focus = "off";
+      # Base settings
+      layout = "bsp";
+
+      # Mouse settings
+      focus_follows_mouse = "autofocus";
+      mouse_follows_focus = "on";
+
+      # Window settings
       window_placement = "second_child";
+      auto_balance = "on";
       window_opacity = "off";
-      top_padding = 36;
-      bottom_padding = 10;
-      left_padding = 10;
-      right_padding = 10;
-      window_gap = 10;
+
+      top_padding = 5;
+      bottom_padding = 5;
+      left_padding = 5;
+      right_padding = 5;
+      window_gap = 5;
     };
   };
 }
