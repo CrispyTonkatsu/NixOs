@@ -1,16 +1,22 @@
 ## Yabai bindings
 
-# focus window
+# stack management
+ctrl + alt - s : yabai -m window --insert stack
+ctrl + alt - p : yabai -m window --toggle float && yabai -m window --toggle float --focus
+
+# focus window (only horizontal monitor layouts work)
 ctrl + alt - h : yabai -m window --focus west || yabai -m display --focus west
-ctrl + alt - j : yabai -m window --focus south || yabai -m display --focus south
-ctrl + alt - k : yabai -m window --focus north || yabai -m display --focus north
 ctrl + alt - l : yabai -m window --focus east || yabai -m display --focus east
 
+ctrl + alt - j : yabai -m window --focus south || yabai -m window --focus stack.next --wrap
+ctrl + alt - k : yabai -m window --focus north || yabai -m window --focus stack.prev --wrap
+
 # swap managed window
-ctrl + alt + shift - h : yabai -m window --swap west || yabai -m window --display west --focus
-ctrl + alt + shift - j : yabai -m window --swap south || yabai -m window --display south --focus
-ctrl + alt + shift - k : yabai -m window --swap north || yabai -m window --display north --focus
-ctrl + alt + shift - l : yabai -m window --swap east || yabai -m window --display east --focus
+ctrl + alt + shift - h : yabai -m window --warp west || yabai -m window --display west --focus
+ctrl + alt + shift - l : yabai -m window --warp east || yabai -m window --display east --focus
+
+ctrl + alt + shift - j : yabai -m window --swap south --focus || yabai -m window --swap stack.next
+ctrl + alt + shift - k : yabai -m window --swap north --focus || yabai -m window --swap stack.prev
 
 # toggle window zoom
 ctrl + alt - m : yabai -m window --toggle zoom-parent --focus

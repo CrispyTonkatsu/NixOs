@@ -1,5 +1,7 @@
 { ... }:
 {
+  # TODO: Add stackline with hammerspoon
+
   services.yabai = {
     enable = true;
 
