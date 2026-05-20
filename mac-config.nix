@@ -7,6 +7,7 @@
 {
   imports = [
     ./core-modules/fonts.nix
+    ./mac-modules/yabai.nix
   ];
 
   environment.systemPackages = with pkgs; [
