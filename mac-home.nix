@@ -13,7 +13,6 @@
     ./home-modules/zoxide.nix
     ./home-modules/starship.nix
 
-    ./mac-modules/skhd.nix
     inputs.mac-app-util.homeManagerModules.default
   ];
 

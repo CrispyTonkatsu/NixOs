@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 {
   services.skhd = {
     enable = true;
 
-    config = builtins.readFile ./skhdrc { };
+    skhdConfig = builtins.readFile ./skhdrc;
   };
 }
