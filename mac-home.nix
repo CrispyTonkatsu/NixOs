@@ -12,9 +12,7 @@
     ./home-modules/nushell.nix
     ./home-modules/zoxide.nix
     ./home-modules/starship.nix
-    ./home-modules/zathura.nix
 
-    ./home-modules/skhd.nix
     inputs.mac-app-util.homeManagerModules.default
   ];
 
@@ -34,6 +32,6 @@
 
   programs.nh = {
     enable = true;
-    flake = "/Users/erina/nixos";
+    flake = "/Users/erina/.nixos";
   };
 }
