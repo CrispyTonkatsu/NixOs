@@ -8,6 +8,7 @@
   imports = [
     ./core-modules/fonts.nix
 
+    # TODO: Consider using AeroSpace for the ability to switch desktops
     ./mac-modules/yabai.nix
     ./mac-modules/skhd.nix
   ];
