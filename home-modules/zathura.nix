@@ -1,6 +1,7 @@
-{...} : {
-	programs.zathura = {
-		enable = true;
-		extraConfig = builtins.readFile(./themes/zathura.theme);
-	};
+{ ... }:
+{
+  programs.zathura = {
+    enable = true;
+    extraConfig = builtins.readFile ./themes/zathura.theme;
+  };
 }
