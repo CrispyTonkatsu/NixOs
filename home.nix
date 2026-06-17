@@ -84,7 +84,6 @@
     # orca-slicer
 
     # theming
-    wpaperd
     rose-pine-cursor
     rose-pine-hyprcursor
 
