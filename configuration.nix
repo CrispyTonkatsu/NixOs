@@ -8,6 +8,7 @@
     ./core-modules/fonts.nix
     ./core-modules/steam.nix
     ./core-modules/typing_langs.nix
+    ./core-modules/greetd.nix
 
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -55,6 +56,7 @@
       "networkmanager"
       "wheel"
       "audio"
+      "dialout"
     ];
     shell = pkgs.nushell;
     packages = with pkgs; [
