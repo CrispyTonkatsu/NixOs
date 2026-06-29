@@ -146,6 +146,10 @@
         "SUPER, mouse:273, resizewindow"
       ];
 
+      gesture = [
+        "3, vertical, workspace"
+      ];
+
       xwayland = {
         force_zero_scaling = true;
       };
