@@ -152,7 +152,10 @@
   # Open ports in the firewall.
   networking.firewall.enable = true;
   # Using tdp for wayvnc
-  networking.firewall.allowedTCPPorts = [ 5900 ];
+  networking.firewall.allowedTCPPorts = [
+    5900
+    5173
+  ];
   # Find what this is for (i forgot) (could be the 3d printer)
   networking.firewall.allowedUDPPorts = [ 3131 ];
   # Or disable the firewall altogether.
