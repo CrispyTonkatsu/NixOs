@@ -6,7 +6,7 @@ local mod = "SUPER"
 ---@param action function | HL.Dispatcher
 ---@param options ? HL.BindOptions
 local function bind_key(keys, action, options)
-	hl.bind(mod + "+" + keys, action, options)
+	hl.bind(mod .. " + " .. keys, action, options)
 end
 
 --- Focus
@@ -29,25 +29,26 @@ for i = 1, 9 do
 end
 
 --- Window
-bind_key("Q", hl.dsp.window.close)
-bind_key("M", hl.dsp.window.fullscreen)
+bind_key("Q", hl.dsp.window.close())
+bind_key("SHIFT + Q", hl.dsp.window.kill())
+bind_key("M", hl.dsp.window.fullscreen())
 bind_key("F", hl.dsp.window.float({ action = "toggle" }))
-bind_key("C", hl.dsp.window.center)
+bind_key("C", hl.dsp.window.center())
 
 bind_key("SHIFT + H", hl.dsp.window.move({ direction = "l" }))
 bind_key("SHIFT + L", hl.dsp.window.move({ direction = "r" }))
 bind_key("SHIFT + J", hl.dsp.window.move({ direction = "d" }))
 bind_key("SHIFT + K", hl.dsp.window.move({ direction = "u" }))
 
-bind_key("CTRL + SHIFT + J", hl.dsp.workspace.move({ workspace = "r+1" }))
-bind_key("CTRL + SHIFT + K", hl.dsp.workspace.move({ workspace = "r-1" }))
+bind_key("CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "r+1" }))
+bind_key("CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "r-1" }))
 
 --- Mouse Binds
-bind_key("mouse:272", hl.dsp.window.drag, {
+bind_key("mouse:272", hl.dsp.window.drag(), {
 	mouse = true,
 	drag = true
 })
-bind_key("mouse:273", hl.dsp.window.resize, {
+bind_key("mouse:273", hl.dsp.window.resize(), {
 	mouse = true,
 	drag = true
 })
@@ -60,11 +61,12 @@ hl.gesture({
 })
 
 --- Managing hyprland
-bind_key("DELETE", hl.dsp.exit)
+bind_key("DELETE", hl.dsp.exit())
 bind_key("F1", hl.dsp.exec_cmd("~/.nixos/home-modules/scripts/gamemode.sh"))
 
 --- Key Utilities
-bind_key("SPACE", hl.dsp.exec_cmd("rofi -show combi -modes combi -combi-modes 'window, drun'"))
+bind_key("SPACE", hl.dsp.exec_cmd("rofi -show drun"))
+bind_key("SHIFT + SPACE", hl.dsp.exec_cmd("rofi -show window"))
 bind_key("RETURN", hl.dsp.exec_cmd("kitty"))
 bind_key("SHIFT + B", hl.dsp.exec_cmd("rofi-bluetooth"))
 

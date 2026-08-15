@@ -5,9 +5,14 @@
     # withUWSM = true;
 
     extraLuaFiles = {
+      "config.system" = {
+        content = ./hyprland-config/system.lua;
+      };
+
       "config.decoration" = {
         content = ./hyprland-config/decoration.lua;
       };
+
       "config.monitors" = {
         content = ./hyprland-config/monitors.lua;
       };

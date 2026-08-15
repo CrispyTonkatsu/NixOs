@@ -70,6 +70,5 @@
       active_border_color #828ec9 
       inactive_border_color #3d505c
     '';
-
   };
 }
