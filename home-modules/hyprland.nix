@@ -23,17 +23,10 @@
     };
 
     # TODO: Figure out how to get these other ones to start with UWSM
-    # settings = {
-    #   exec-once = [
-    #     "waybar"
-    #     "pa-notify"
-    #   ];
-    #
     #   input = {
     #     kb_layout = "us,us";
     #     kb_variant = ",intl";
     #     kb_options = "caps:swapescape, grp:alt_shift_toggle";
     #   };
-    # };
   };
 }
