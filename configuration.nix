@@ -77,7 +77,10 @@
   programs.dconf.enable = true;
 
   # Display Stuff
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

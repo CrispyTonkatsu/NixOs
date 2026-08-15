@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
-    # withUWSM = true;
+    systemd.enable = false;
 
     extraLuaFiles = {
       "config.system" = {
