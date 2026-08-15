@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
+    flake-utils.url = "github:numtide/flake-utils";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +22,7 @@
   outputs =
     {
       nixpkgs,
+      flake-utils,
       home-manager,
       mac-app-util,
       darwin,
@@ -50,5 +53,23 @@
           ];
         };
       };
-    };
+    }
+
+    # Shells made to edit this environment
+    // flake-utils.lib.eachDefaultSystem (
+      local-system:
+      let
+        pkgs = nixpkgs.legacyPackages.${local-system};
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          name = "HIHI";
+
+          packages = with pkgs; [
+            lua-language-server
+            nixd
+          ];
+        };
+      }
+    );
 }

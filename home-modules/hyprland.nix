@@ -3,6 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
+    # TODO: Migrate config from hyprlang to lua
     settings = {
       env = [
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"
@@ -36,7 +37,6 @@
       exec-once = [
         "waybar"
         "pa-notify"
-        "wpaperd"
       ];
 
       general = {
