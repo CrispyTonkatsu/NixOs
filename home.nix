@@ -63,9 +63,6 @@
     jetbrains.rider
     jetbrains.rust-rover
 
-    pcsx2
-    # rpcs3
-
     obsidian
 
     godot-mono
