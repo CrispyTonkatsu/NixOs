@@ -10,7 +10,6 @@ hl.config({
 	},
 
 	general = {
-		border_size = 2,
 		col = {
 			active_border = "rgb(944956) rgb(c0c5d4) 45deg"
 		},
@@ -23,8 +22,6 @@ hl.config({
 		blur = {
 			enabled = true
 		},
-
-		rounding = 3
 	},
 })
 

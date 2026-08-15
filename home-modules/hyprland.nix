@@ -8,7 +8,6 @@
       "config.decoration" = {
         content = ./hyprland-config/decoration.lua;
       };
-
       "config.monitors" = {
         content = ./hyprland-config/monitors.lua;
       };
