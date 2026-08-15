@@ -63,12 +63,32 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          name = "HIHI";
+          name = "NixOS config edit shell";
 
           packages = with pkgs; [
             lua-language-server
             nixd
           ];
+
+          HYPRLAND_STUBS = "${pkgs.hyprland}/share/hypr/stubs";
+
+          shellHook = ''
+            # Dynamically generate .luarc.json pointing to the exact current nix package stubs
+            cat << EOF > .luarc.json
+            {
+              "workspace": {
+                "library": [
+                  "${pkgs.hyprland}/share/hypr/stubs"
+                ]
+              },
+              "diagnostics": {
+                "globals": ["hl"]
+              }
+            }
+            EOF
+
+            echo "LSP configuration generated for this Hyprland version."
+          '';
         };
       }
     );
