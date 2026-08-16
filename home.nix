@@ -15,9 +15,7 @@
     ./home-modules/nvim.nix
     ./home-modules/zathura.nix
     ./home-modules/zoxide.nix
-
     ./home-modules/waybar.nix
-    ./home-modules/ashell.nix
 
     ./home-modules/scripts.nix
     ./home-modules/desktop-files.nix
