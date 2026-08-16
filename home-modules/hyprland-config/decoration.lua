@@ -17,15 +17,10 @@ hl.config({
 	},
 })
 
-hl.curve("ease_in_out_exp", {
-	type = "bezier",
-	points = {},
-})
-
 hl.animation({
 	leaf = "workspaces",
 	enabled = true,
 	speed = 3,
-	curve = "default",
+	bezier = "default",
 	style = "slidevert"
 })
