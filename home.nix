@@ -11,11 +11,13 @@
     ./home-modules/hyprland.nix
     ./home-modules/wpaperd.nix
     ./home-modules/hyprlock.nix
-    ./home-modules/waybar.nix
     ./home-modules/mako.nix
     ./home-modules/nvim.nix
     ./home-modules/zathura.nix
     ./home-modules/zoxide.nix
+
+    ./home-modules/waybar.nix
+    ./home-modules/ashell.nix
 
     ./home-modules/scripts.nix
     ./home-modules/desktop-files.nix
