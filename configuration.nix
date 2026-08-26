@@ -8,7 +8,7 @@
     ./core-modules/fonts.nix
     ./core-modules/steam.nix
     ./core-modules/typing_langs.nix
-    ./core-modules/greetd.nix
+    ./core-modules/ly.nix
 
     inputs.home-manager.nixosModules.home-manager
   ];
