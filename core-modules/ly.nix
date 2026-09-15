@@ -10,8 +10,9 @@
 
       animate = true;
       animation = "colormix";
-      colormix_col1 = "0x005E244E";
-      colormix_col2 = "0x00E68457";
+      colormix_col1 = "0x00121358";
+      colormix_col2 = "0x00121358";
+      colormix_col3 = "0x00232F72";
 
       load = true;
       save = true;
