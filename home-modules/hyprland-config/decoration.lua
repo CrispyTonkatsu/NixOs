@@ -1,8 +1,8 @@
 hl.env("HYPRCURSOR_THEME", "rose-pine-cursor")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_SIZE", "36")
 
 hl.env("GDK_SCALE", "2")
-hl.env("XCURSOR_SIZE", "2")
+-- hl.env("XCURSOR_SIZE", "2")
 
 hl.config({
 	general = {

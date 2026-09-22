@@ -84,7 +84,7 @@
     rose-pine-cursor
     rose-pine-hyprcursor
 
-    ferdium
+    p3x-onenote
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
