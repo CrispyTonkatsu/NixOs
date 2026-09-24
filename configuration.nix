@@ -46,6 +46,9 @@
   programs = {
     fish.enable = true;
     nix-ld.enable = true;
+    nix-ld.libraries = [
+      pkgs.gfortran.cc.lib
+    ];
   };
 
   users.users.erina = {
