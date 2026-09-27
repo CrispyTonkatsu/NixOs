@@ -85,8 +85,10 @@
     rose-pine-cursor
     rose-pine-hyprcursor
 
-    julia
-    gfortran.cc.lib
+    pomo
+    pomodoro
+
+    localsend
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
