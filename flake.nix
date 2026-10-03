@@ -38,7 +38,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           home-manager.darwinModules.home-manager
-          mac-app-util.darwinModules.default
           ./mac-config.nix
         ];
       };
