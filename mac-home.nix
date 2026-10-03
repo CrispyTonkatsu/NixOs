@@ -28,6 +28,9 @@
   home.packages = with pkgs; [
     firefox
     jetbrains-toolbox
+
+    scummvm
+    dosbox
   ];
 
   programs.nh = {

@@ -8,8 +8,8 @@
   imports = [
     ./core-modules/fonts.nix
 
-    ./mac-modules/yabai.nix
-    ./mac-modules/skhd.nix
+    # ./mac-modules/yabai.nix
+    # ./mac-modules/skhd.nix
   ];
 
   environment.systemPackages = with pkgs; [

@@ -1,7 +1,7 @@
 { ... }:
 {
   services.yabai = {
-    enable = true;
+    enable = false;
 
     config = {
       # Base settings
