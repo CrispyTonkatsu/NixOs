@@ -11,3 +11,10 @@ hl.monitor({
 	position = "auto-right",
 	scale = 2
 })
+
+hl.monitor({
+	output = "DP-6",
+	mode = "preferred",
+	position = "auto-right",
+	scale = 2
+})

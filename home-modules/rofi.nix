@@ -2,8 +2,7 @@
 {
   programs.rofi = {
     enable = true;
-    location = "center";
-    font = "RobotoMono Nerd Font Mono";
+    settings.font = "RobotoMono Nerd Font Mono";
     theme = "~/.nixos/home-modules/themes/rofi-theme.rasi";
   };
 }

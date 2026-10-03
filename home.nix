@@ -55,8 +55,9 @@
 
     discord
 
+    jellyfin-desktop
     mpv
-    qiv
+    imv
     hyprpicker
 
     jetbrains.clion
@@ -84,7 +85,10 @@
     rose-pine-cursor
     rose-pine-hyprcursor
 
-    p3x-onenote
+    pomo
+    pomodoro
+
+    localsend
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
