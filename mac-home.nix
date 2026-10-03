@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -10,8 +9,6 @@
     ./home-modules/nushell.nix
     ./home-modules/zoxide.nix
     ./home-modules/starship.nix
-
-    inputs.mac-app-util.homeManagerModules.default
   ];
 
   programs.home-manager.enable = true;

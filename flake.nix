@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mac-app-util.url = "github:hraban/mac-app-util";
+    # mac-app-util.url = "github:hraban/mac-app-util";
   };
 
   outputs =
@@ -24,7 +24,6 @@
       nixpkgs,
       flake-utils,
       home-manager,
-      mac-app-util,
       darwin,
       ...
     }@inputs:
