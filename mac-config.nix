@@ -1,15 +1,11 @@
 {
   pkgs,
   inputs,
-  lib,
   ...
 }:
 {
   imports = [
     ./core-modules/fonts.nix
-
-    # ./mac-modules/yabai.nix
-    # ./mac-modules/skhd.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -67,5 +63,20 @@
     useUserPackages = true;
     users.erina = import ./mac-home.nix;
     backupFileExtension = "backup";
+  };
+
+  homebrew = {
+    enable = true;
+
+    onActivation.autoUpdate = true;
+    onActivation.upgrade = true;
+
+    casks = [
+      "kitty"
+      "firefox"
+    ];
+
+    # Optional: Automatically clean up Homebrew apps not declared here
+    onActivation.cleanup = "zap";
   };
 }
