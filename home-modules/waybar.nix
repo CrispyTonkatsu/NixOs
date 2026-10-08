@@ -6,6 +6,7 @@
     enable = true;
     package = pkgs.waybar;
     style = builtins.readFile ./themes/waybar.css;
+
     settings = {
       mainBar = {
         modules-left = [
@@ -40,6 +41,16 @@
 
         clock = {
           format = "{:%F %H:%M}";
+
+          timezone-tooltip-format = "{:%F %H:%M}";
+          timezones = [
+            "America/Los_Angeles"
+            "America/Sao_Paulo"
+            "Asia/Kuala_Lumpur"
+          ];
+
+          tooltip = true;
+          tooltip-format = "{tz_list}";
         };
 
         network = {
