@@ -61,7 +61,7 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          name = "NixOS config edit shell";
+          name = "nixos-config";
 
           packages = with pkgs; [
             lua-language-server

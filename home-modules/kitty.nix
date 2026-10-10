@@ -7,6 +7,7 @@
     settings = {
       shell = "${pkgs.nushell.outPath}/bin/nu";
       linux_display_server = "wayland";
+      remember_window_size = false;
 
       background_opacity = "0.9";
       confirm_os_window_close = 0;
