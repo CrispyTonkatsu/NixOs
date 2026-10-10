@@ -43,6 +43,9 @@ bind_key("SHIFT + K", hl.dsp.window.move({ direction = "u" }))
 bind_key("CTRL + SHIFT + J", hl.dsp.window.move({ workspace = "r+1" }))
 bind_key("CTRL + SHIFT + K", hl.dsp.window.move({ workspace = "r-1" }))
 
+bind_key("CTRL + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true, window = "activeWindow" }))
+bind_key("CTRL + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true, window = "activeWindow" }))
+
 --- Mouse Binds
 bind_key("mouse:272", hl.dsp.window.drag(), {
 	mouse = true,
