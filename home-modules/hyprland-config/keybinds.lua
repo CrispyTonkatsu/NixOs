@@ -24,8 +24,9 @@ bind_key("CTRL + K", hl.dsp.focus({
 }))
 
 for i = 1, 9 do
-	bind_key("code:1" .. i, hl.dsp.focus({ workspace = "m~" .. i }))
-	bind_key("SHIFT + code:1" .. i, hl.dsp.window.move({ workspace = "m~" .. i }))
+	local keycode = i + 9;
+	bind_key("code:" .. keycode, hl.dsp.focus({ workspace = "m~" .. i }))
+	bind_key("SHIFT + code:" .. keycode, hl.dsp.window.move({ workspace = "m~" .. i }))
 end
 
 --- Window

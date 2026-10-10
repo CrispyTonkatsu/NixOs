@@ -35,8 +35,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # TODO: Keep messing around until you find a setup that works automatically and syncs time nicely across windows and linux
-  # Setting the time server
   time.hardwareClockInLocalTime = true;
   services.automatic-timezoned.enable = true;
 
