@@ -83,3 +83,10 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
+
+--- Shader keybinds
+if hl.plugin.darkwindow ~= nil then
+	bind_key("CTRL + I", hl.plugin.darkwindow.dsp_shade({
+		shader = "invert",
+	}))
+end

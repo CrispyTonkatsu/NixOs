@@ -138,7 +138,7 @@
   ];
 
   # Options using the pkgs
-  nix.nixPath = [ " nixpkgs=${inputs.nixpkgs}" ];
+  nix.settings.nix-path = [ " nixpkgs=${inputs.nixpkgs}" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

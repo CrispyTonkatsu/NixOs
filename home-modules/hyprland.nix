@@ -1,8 +1,12 @@
-{ ... }: {
+{ pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
     systemd.enable = false;
+
+    plugins = with pkgs.hyprlandPlugins; [
+      hypr-darkwindow
+    ];
 
     extraLuaFiles = {
       "config.system" = {
