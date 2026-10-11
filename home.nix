@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -87,7 +87,6 @@
     rose-pine-hyprcursor
 
     thunar
-    thunar-volman
     thunar-media-tags-plugin
     papirus-icon-theme
     file-roller
@@ -112,7 +111,7 @@
   # or
   #
   #  /etc/profiles/per-user/erina/etc/profile.d/hm-session-vars.sh
-  #
+
   home.sessionVariables = {
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
@@ -123,11 +122,15 @@
     enable = true;
     defaultApplications = {
       "text/plain" = [ "nvim.desktop" ];
+
       "application/pdf" = [ "zathura.desktop" ];
-      "image/*" = [ "sxiv.desktop" ];
+
+      "image/*" = [ "imv.desktop" ];
+
       "video/png" = [ "mpv.desktop" ];
       "video/jpg" = [ "mpv.desktop" ];
       "video/*" = [ "mpv.desktop" ];
+
       "inode/directory" = [ "thunar.desktop" ];
 
       "web-browser" = [ "firefox.desktop" ];
