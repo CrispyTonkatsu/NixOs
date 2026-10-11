@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./home-modules/gtk.nix
     ./home-modules/git.nix
     ./home-modules/fish.nix
     ./home-modules/nushell.nix
@@ -85,10 +86,11 @@
     rose-pine-cursor
     rose-pine-hyprcursor
 
-    pomo
-    pomodoro
-
-    localsend
+    xfce.thunar
+    xfce.thunar-volman
+    xfce.thunar-media-tags-plugin
+    papirus-icon-theme
+    file-roller
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
