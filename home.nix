@@ -10,6 +10,7 @@
     ./home-modules/kitty.nix
     ./home-modules/rofi.nix
     ./home-modules/hyprland.nix
+    ./home-modules/swayosd.nix
     ./home-modules/wpaperd.nix
     ./home-modules/hyprlock.nix
     ./home-modules/mako.nix
@@ -49,7 +50,6 @@
     pulsemixer
 
     notify-desktop
-    pa-notify
     hyprshot
 
     vial
