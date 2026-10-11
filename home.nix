@@ -71,11 +71,6 @@
     krita
     gimp3
 
-    # rofi extensions
-    rofi-bluetooth
-
-    blueman
-
     wayvnc
 
     freecad-wayland
@@ -85,6 +80,8 @@
     # theming
     rose-pine-cursor
     rose-pine-hyprcursor
+
+    overskride
 
     thunar
     thunar-media-tags-plugin
