@@ -86,9 +86,9 @@
     rose-pine-cursor
     rose-pine-hyprcursor
 
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.thunar-media-tags-plugin
+    thunar
+    thunar-volman
+    thunar-media-tags-plugin
     papirus-icon-theme
     file-roller
   ];
@@ -119,15 +119,22 @@
   };
 
   # Default apps
-  xdg.mimeApps.defaultApplications = {
-    "text/plain" = [ "nvim" ];
-    "applicaiton/pdf" = [ "zathura.desktop" ];
-    "image/*" = [ "sxiv.desktop" ];
-    "video/png" = [ "mpv.desktop" ];
-    "video/jpg" = [ "mpv.desktop" ];
-    "video/*" = [ "mpv.desktop" ];
-    "web-browser" = [ "firefox" ];
-    "inode/directory" = [ "dolphin" ];
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/plain" = [ "nvim.desktop" ];
+      "application/pdf" = [ "zathura.desktop" ];
+      "image/*" = [ "sxiv.desktop" ];
+      "video/png" = [ "mpv.desktop" ];
+      "video/jpg" = [ "mpv.desktop" ];
+      "video/*" = [ "mpv.desktop" ];
+      "inode/directory" = [ "thunar.desktop" ];
+
+      "web-browser" = [ "firefox.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+    };
   };
 
   # Let Home Manager install and manage itself.
