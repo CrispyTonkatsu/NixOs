@@ -67,10 +67,13 @@
 
     packages = with pkgs; [
       openocd
+      probe-rs-tools
     ];
 
     extraRules = ''
-      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+      # Force access for Seeed Studio XIAO Debug Mate via dialout group
+      SUBSYSTEM=="usb", ATTR{idVendor}=="0d28", ATTR{idProduct}=="0204", MODE="0660", GROUP="dialout"
+      SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0d28", ATTRS{idProduct}=="0204", MODE="0660", GROUP="dialout"
     '';
   };
 

@@ -1,7 +1,6 @@
 local mod = "SUPER"
 
 ---@function Binding keys shorthand
----comment
 ---@param keys string
 ---@param action function | HL.Dispatcher
 ---@param options ? HL.BindOptions
@@ -50,11 +49,9 @@ bind_key("CTRL + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true, win
 --- Mouse Binds
 bind_key("mouse:272", hl.dsp.window.drag(), {
 	mouse = true,
-	drag = true
 })
 bind_key("mouse:273", hl.dsp.window.resize(), {
 	mouse = true,
-	drag = true
 })
 
 --- Touchpad binds

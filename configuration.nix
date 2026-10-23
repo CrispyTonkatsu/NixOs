@@ -56,6 +56,7 @@
       "wheel"
       "audio"
       "dialout"
+      "plugdev"
     ];
     shell = pkgs.nushell;
     packages = with pkgs; [
