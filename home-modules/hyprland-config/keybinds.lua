@@ -69,7 +69,10 @@ bind_key("F1", hl.dsp.exec_cmd("~/.nixos/home-modules/scripts/gamemode.sh"))
 bind_key("SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 bind_key("SHIFT + SPACE", hl.dsp.exec_cmd("rofi -show window"))
 bind_key("RETURN", hl.dsp.exec_cmd("kitty"))
-bind_key("SHIFT + B", hl.dsp.exec_cmd("rofi-bluetooth"))
+
+--- Screen shot
+bind_key("Print", hl.dsp.exec_cmd("hyprshot -m window"))
+bind_key("SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region"))
 
 --- External (using hl bind as they don't use the mod key)
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("swayosd-client --brightness raise"))
