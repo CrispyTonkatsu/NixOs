@@ -52,6 +52,7 @@
 
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
 
         modules = [
           ./cachy.nix
