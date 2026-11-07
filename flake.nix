@@ -27,7 +27,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
-
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       darwinConfigurations."Erinas-MacBook-Pro" = darwin.lib.darwinSystem {
@@ -48,6 +48,18 @@
             ./hardware/hardware-configuration.nix
           ];
         };
+      };
+
+      homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          ./cachy.nix
+          {
+            home.username = "erina";
+            home.homeDirectory = "/home/erina";
+          }
+        ];
       };
     }
 
