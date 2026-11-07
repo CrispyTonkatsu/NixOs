@@ -33,6 +33,11 @@
       darwinConfigurations."Erinas-MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = { inherit inputs; };
+
+        extraSpecialArgs = {
+          isNixOS = false;
+        };
+
         modules = [
           home-manager.darwinModules.home-manager
           ./mac-config.nix
@@ -43,6 +48,10 @@
         default = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs system; };
 
+          extraSpecialArgs = {
+            isNixOS = true;
+          };
+
           modules = [
             ./configuration.nix
             ./hardware/hardware-configuration.nix
@@ -50,9 +59,12 @@
         };
       };
 
-      homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."erina" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {
+          inherit inputs;
+          isNixOS = false;
+        };
 
         modules = [
           ./cachy.nix
@@ -62,43 +74,5 @@
           }
         ];
       };
-    }
-
-    # Shells made to edit this environment
-    // flake-utils.lib.eachDefaultSystem (
-      local-system:
-      let
-        pkgs = nixpkgs.legacyPackages.${local-system};
-      in
-      {
-        devShells.default = pkgs.mkShell {
-          name = "nixos-config";
-
-          packages = with pkgs; [
-            lua-language-server
-            nixd
-          ];
-
-          HYPRLAND_STUBS = "${pkgs.hyprland}/share/hypr/stubs";
-
-          shellHook = ''
-            # Dynamically generate .luarc.json pointing to the exact current nix package stubs
-            cat << EOF > .luarc.json
-            {
-              "workspace": {
-                "library": [
-                  "${pkgs.hyprland}/share/hypr/stubs"
-                ]
-              },
-              "diagnostics": {
-                "globals": ["hl"]
-              }
-            }
-            EOF
-
-            echo "LSP configuration generated for this Hyprland version."
-          '';
-        };
-      }
-    );
+    };
 }
