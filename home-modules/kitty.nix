@@ -1,12 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, isNixOS, ... }:
 {
   programs.kitty = {
     enable = true;
     font.name = "Hack";
+    package = if isNixOS then pkgs.kitty else null;
     themeFile = "ayu";
 
     settings = {
-      shell = "${pkgs.nushell.outPath}/bin/nu";
+      shell = if isNixOS then "${pkgs.nushell.outPath}/bin/nu" else "nu";
       linux_display_server = "wayland";
       remember_window_size = false;
 
