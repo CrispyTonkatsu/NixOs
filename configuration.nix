@@ -66,7 +66,11 @@
 
   # home-manager import
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+      isNixOS = true;
+    };
+
     users = {
       erina = import ./home.nix;
     };

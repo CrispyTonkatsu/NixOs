@@ -57,7 +57,10 @@
   system.primaryUser = "erina";
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+      isNixOS = false;
+    };
 
     useGlobalPkgs = true;
     useUserPackages = true;

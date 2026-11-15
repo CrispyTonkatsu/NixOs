@@ -17,3 +17,5 @@ $env.PATH = $env.PATH ++ [
      $"($env.HOME)/.godot"
      $"($env.HOME)/node_modules/.bin"
 ]
+
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')

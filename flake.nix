@@ -28,14 +28,13 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
     in
     {
       darwinConfigurations."Erinas-MacBook-Pro" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit inputs; };
-
-        extraSpecialArgs = {
-          isNixOS = false;
+        specialArgs = {
+          inherit inputs;
         };
 
         modules = [
@@ -47,10 +46,6 @@
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs system; };
-
-          extraSpecialArgs = {
-            isNixOS = true;
-          };
 
           modules = [
             ./configuration.nix
